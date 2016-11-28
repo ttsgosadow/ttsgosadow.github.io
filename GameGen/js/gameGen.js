@@ -123,10 +123,10 @@ function togglediv(id) {
             }
             function suitImage(p1) {
                 var suitURLs = {
-                    c: "http://i.imgur.com/odd05z0.png",
-                    m: "http://i.imgur.com/2XrMZov.png",
-                    r: "http://i.imgur.com/n2foeTP.png",
-                    t: "http://i.imgur.com/0NKEFbm.png"
+                    c: "images/c.png",
+                    m: "images/m.png",
+                    r: "images/r.png",
+                    t: "images/t.png"
                 }
                 var altText = {
                     c: "Crows",
