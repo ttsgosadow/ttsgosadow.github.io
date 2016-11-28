@@ -2,11 +2,11 @@ body {
                 padding: 0px;
                 max-width: 600px;
             }
-a:link, a:visited {
+.container a:link, .container  a:visited {
                 text-decoration: underline;
                  color: #0000FF;
              }
-             a:hover {
+.container a:hover {
                  color: #FF0000;
              }
 nav ul, footer ul {
