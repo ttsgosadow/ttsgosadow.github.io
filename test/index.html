@@ -5,7 +5,7 @@
   {
   var URIcomp = decodeURIComponent((new RegExp('[?|&]' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || false;
   
-  return new RegExp( "/[cmrt]/g" ).exec( URIcomp );
+  return URIcomp.match( "/[cmrt]/g" );
   }
 </script>
 </head>
