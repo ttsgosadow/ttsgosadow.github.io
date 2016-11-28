@@ -43,7 +43,7 @@ function togglediv(id) {
                 var schemeCard2 = topCard(deck)
                 while (schemeCard2["card"] == "bj" || schemeCard2["card"] == "rj")
                     schemeCard2 = topCard(deck)
-                window.location.href = "?dC=" + deploymentCard["card"] + "&sC=" + strategyCard["card"] + "&sC1=" + schemeCard1["card"] + "&sC2=" + schemeCard2["card"]
+                window.location.href = "?" + deploymentCard["card"] + strategyCard["card"] + schemeCard1["card"] + schemeCard2["card"]
             }
             function newDeck() {
                 return ["1c", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "11c", "12c", "13c",
