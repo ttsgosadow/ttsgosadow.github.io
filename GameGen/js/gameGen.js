@@ -25,8 +25,10 @@ function togglediv(id) {
                 document.getElementById("scheme4-text").style.display = toggleTo
                 document.getElementById("scheme5-text").style.display = toggleTo
             }
-            function getURLParameter(name) {
-                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || false;
+            function getURLParameter() {
+               var URIcomp = decodeURIComponent((new RegExp('[?|&]' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || false;
+  
+                return URIcomp.match( /(\d+[cmrt]|bj|rj)/g );    
             }
             function newGame() {
                 var deck = newDeck()
@@ -85,16 +87,17 @@ function togglediv(id) {
                 return array;
             }
             function generateGame() {
-                var deploymentCard = cardFromText(getURLParameter("dC"))
-                var strategyCard = cardFromText(getURLParameter("sC"))
-                var schemeCard1 = cardFromText(getURLParameter("sC1"))
-                var schemeCard2 = cardFromText(getURLParameter("sC2"))
+                var URIparam = getURLParameter()
+              var deploymentCard = cardFromText(URIparam[0])
+                var strategyCard = cardFromText(URIparam[1])
+                var schemeCard1 = cardFromText(URIparam[2])
+                var schemeCard2 = cardFromText(URIparam[3])
                 if (!deploymentCard || !strategyCard || !schemeCard1 || !schemeCard2)
                     return
                 var deployment = getDeployment(deploymentCard["value"])
                 var strategy = getStrategy(strategyCard["suit"])
                 var schemes = getSchemes(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"])
-                var gameLink = "?dC=" + deploymentCard["card"] + "&sC=" + strategyCard["card"] + "&sC1=" + schemeCard1["card"] + "&sC2=" + schemeCard2["card"]
+                var gameLink = "?" + URIparam[0] + URIparam[1] + URIparam[2] + URIparam[3]
                 //hier ui maken 
                 var checkedState = ""
                 var generatedGame = '<p><div class="banner" id="banner">' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</div>' +
