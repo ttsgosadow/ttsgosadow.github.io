@@ -106,6 +106,7 @@ function togglediv(id) {
                 var checkedState = ""
                 var generatedGame = '<div class="alert alert-success" role="alert"><strong>Succes!</strong> The fickle winds of fate yielded these flips for deployment, strategy and schemes.</div>' + 
                     '<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">'+
+                    '<p>Use this <a href="' + gameLink + '">perma-link</a> to the game.</p>' +
                     '<strong>Game: ' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</strong>' +
                     ' <span class="pull-right"><small>Use this <a href="' + gameLink + '">perma-link</a> to the game</small></span>' +
                     '</h3></div><div class="panel-body">' + 
