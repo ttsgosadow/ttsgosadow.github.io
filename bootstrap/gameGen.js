@@ -121,7 +121,7 @@ function togglediv(id) {
                     '</ul></p>' +
                     '</div></div>'
                 }
-                document.getElementById( targetField ).innerHTML = '<textarea>'+generatedGame+'</textarea>'
+                document.getElementById( targetField ).innerHTML = generatedGame
             }
             function cardImage(p1) {
                 if (p1["suit"] == "c" || p1["suit"] == "m" || p1["suit"] == "r" || p1["suit"] == "t")
