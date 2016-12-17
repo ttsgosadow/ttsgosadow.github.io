@@ -120,6 +120,7 @@ function togglediv(id) {
                     '<li>' + schemes[4][1] + ' (' + suitImage(schemes[4][0]) + ')<input type="checkbox" class="toggle" id="scheme5-text-cb" '+checkedState+' onclick="togglediv(\'scheme5-text\')"><div class="scheme-text" id="scheme5-text">' + schemes[4][2] + '</div></li>' +
                     '</ul></p>' +
                     '</div></div>'
+                    alert( generatedGame )
                 }
                 document.getElementById( targetField ).innerHTML = generatedGame
             }
