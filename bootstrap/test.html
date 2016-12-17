@@ -14,6 +14,7 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <script src="gameGen.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -75,9 +76,14 @@
         <h1>Malifaux Game Generator</h1>
       </div>
       <p>This is a game generator for Malifaux second edition (M2E). Use it to generate a game, and send it to your opponent. It's something I find very useful for setting up a game in advance, to keep al the game time for playing instead of also preparing the scenario, crews, etc.</p>
-      <p><button type="button" class="btn btn-lg btn-primary">Generate new game</button></p>
+      <p><button type="button" class="btn btn-lg btn-primary"  onClick="newGame('generated-game');">Generate new game</button></p>
   
-
+      <div class="page-header">
+        <h1>Generated Game</h1>
+      </div>
+      <p class="generated-game" id="generated-game">
+        <i>Press the button to generate a game</i>
+      </p>
 
       <div class="page-header">
         <h1>Buttons</h1>
