@@ -106,8 +106,8 @@ function togglediv(id) {
                 var checkedState = ""
                 var generatedGame = '<div class="alert alert-success" role="alert"><strong>Succes!</strong> The fickle winds of fate yielded these flips for deployment, strategy and schemes.</div>' + 
                     '<div class="panel panel-primary"><div class="panel-heading"><h3 class="panel-title">'+
-                    cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '' +
-                    ' <small>[<a href="' + gameLink + '">perma-link</a>]</small>' + 
+                    '<strong>Game: ' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</strong>' +
+                    ' [<a href="' + gameLink + '">perma-link</a>]' + 
                     '</h3></div><div class="panel-body">' +
                     '<p class="text-right"><a href="#" onClick="toggleAll(true);return false;">Show</a>/<a href="#" onClick="toggleAll(false);return false;">hide</a> all</p>' +
                     '<p><strong>Deployment:</strong> ' + deployment[0] + ' (' + cardImage(deploymentCard) + ')<input type="checkbox" class="toggle" id="deployment-text-cb" '+checkedState+' onclick="togglediv(\'deployment-text\')"><div class="deployment-text" id="deployment-text">' + deployment[1] + '</div></p>' +
