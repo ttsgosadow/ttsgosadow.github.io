@@ -107,17 +107,17 @@ function togglediv(id) {
                 var generatedGame = '<div class="alert alert-success" role="alert"><strong>Succes!</strong> The fickle winds of fate yielded these flips for deployment, strategy and schemes.</div>' + 
                     '<div class="panel panel-primary"><div class="panel-heading"><h3 class="panel-title">'+
                     '<strong>Game: ' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</strong>' +
-                    '</h3></div><div class="panel-body">' +
-                    'Use this <a href="' + gameLink + '">perma-link</a></span> to the game' + 
+                    ' <span class="pull-right">Use this <a href="' + gameLink + '">perma-link</a></span> to the game </span>' +
+                    '</h3></div><div class="panel-body">' + 
                     '<span class="pull-right"><a href="#" onClick="toggleAll(true);return false;">Show</a>/<a href="#" onClick="toggleAll(false);return false;">hide</a> all</span>' +
-                    '<p><strong>Deployment:</strong> ' + deployment[0] + ' (' + cardImage(deploymentCard) + ')<input type="checkbox" class="toggle" id="deployment-text-cb" '+checkedState+' onclick="togglediv(\'deployment-text\')"><div class="deployment-text" id="deployment-text">' + deployment[1] + '</div></p>' +
-                    '<p><strong>Strategy:</strong> ' + strategy[0] + ' (' + cardImage(strategyCard) + ')<input type="checkbox" class="toggle" id="strategy-text-cb" '+checkedState+' onclick="togglediv(\'strategy-text\')"><div class="strategy-text" id="strategy-text">' + strategy[1] + '</div></p>' +
+                    '<p><strong>Deployment:</strong> ' + deployment[0] + ' (' + cardImage(deploymentCard) + ')<input type="checkbox" class="pull-right" id="deployment-text-cb" '+checkedState+' onclick="togglediv(\'deployment-text\')"><div class="deployment-text" id="deployment-text">' + deployment[1] + '</div></p>' +
+                    '<p><strong>Strategy:</strong> ' + strategy[0] + ' (' + cardImage(strategyCard) + ')<input type="checkbox" class="pull-right" id="strategy-text-cb" '+checkedState+' onclick="togglediv(\'strategy-text\')"><div class="strategy-text" id="strategy-text">' + strategy[1] + '</div></p>' +
                     '<p><strong>Schemes:</strong> (' + cardImage(schemeCard1) + ',' + cardImage(schemeCard2) + ')<ul>' +
                     '<li>' + schemes[0][1] + ' (' + suitImage(schemes[0][0]) + ')<input type="checkbox" class="pull-right" id="scheme1-text-cb" '+checkedState+' onclick="togglediv(\'scheme1-text\')"><div class="scheme-text" id="scheme1-text">' + schemes[0][2] + '</div></li>' +
-                    '<li>' + schemes[1][1] + ' (' + suitImage(schemes[1][0]) + ')<input type="checkbox" class="toggle" id="scheme2-text-cb" '+checkedState+' onclick="togglediv(\'scheme2-text\')"><div class="scheme-text" id="scheme2-text">' + schemes[1][2] + '</div></li>' +
-                    '<li>' + schemes[2][1] + ' (' + suitImage(schemes[2][0]) + ')<input type="checkbox" class="toggle" id="scheme3-text-cb" '+checkedState+' onclick="togglediv(\'scheme3-text\')"><div class="scheme-text" id="scheme3-text">' + schemes[2][2] + '</div></li>' +
-                    '<li>' + schemes[3][1] + ' (' + suitImage(schemes[3][0]) + ')<input type="checkbox" class="toggle" id="scheme4-text-cb" '+checkedState+' onclick="togglediv(\'scheme4-text\')"><div class="scheme-text" id="scheme4-text">' + schemes[3][2] + '</div></li>' +
-                    '<li>' + schemes[4][1] + ' (' + suitImage(schemes[4][0]) + ')<input type="checkbox" class="toggle" id="scheme5-text-cb" '+checkedState+' onclick="togglediv(\'scheme5-text\')"><div class="scheme-text" id="scheme5-text">' + schemes[4][2] + '</div></li>' +
+                    '<li>' + schemes[1][1] + ' (' + suitImage(schemes[1][0]) + ')<input type="checkbox" class="pull-right" id="scheme2-text-cb" '+checkedState+' onclick="togglediv(\'scheme2-text\')"><div class="scheme-text" id="scheme2-text">' + schemes[1][2] + '</div></li>' +
+                    '<li>' + schemes[2][1] + ' (' + suitImage(schemes[2][0]) + ')<input type="checkbox" class="pull-right" id="scheme3-text-cb" '+checkedState+' onclick="togglediv(\'scheme3-text\')"><div class="scheme-text" id="scheme3-text">' + schemes[2][2] + '</div></li>' +
+                    '<li>' + schemes[3][1] + ' (' + suitImage(schemes[3][0]) + ')<input type="checkbox" class="pull-right" id="scheme4-text-cb" '+checkedState+' onclick="togglediv(\'scheme4-text\')"><div class="scheme-text" id="scheme4-text">' + schemes[3][2] + '</div></li>' +
+                    '<li>' + schemes[4][1] + ' (' + suitImage(schemes[4][0]) + ')<input type="checkbox" class="pull-right" id="scheme5-text-cb" '+checkedState+' onclick="togglediv(\'scheme5-text\')"><div class="scheme-text" id="scheme5-text">' + schemes[4][2] + '</div></li>' +
                     '</ul></p>' +
                     '</div></div>'
                 }
