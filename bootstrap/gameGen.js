@@ -86,7 +86,7 @@ function togglediv(id) {
                 }
                 return array;
             }
-            function generateGame() {
+            function generateGame( targetField ) {
                 var URIparam = getURLParameter()
               var deploymentCard = cardFromText(URIparam[0])
                 var strategyCard = cardFromText(URIparam[1])
@@ -112,7 +112,7 @@ function togglediv(id) {
                     '<li>' + schemes[3][1] + ' (' + suitImage(schemes[3][0]) + ')<input type="checkbox" class="toggle" id="scheme4-text-cb" '+checkedState+' onclick="togglediv(\'scheme4-text\')"><div class="scheme-text" id="scheme4-text">' + schemes[3][2] + '</div></li>' +
                     '<li>' + schemes[4][1] + ' (' + suitImage(schemes[4][0]) + ')<input type="checkbox" class="toggle" id="scheme5-text-cb" '+checkedState+' onclick="togglediv(\'scheme5-text\')"><div class="scheme-text" id="scheme5-text">' + schemes[4][2] + '</div></li>' +
                     '</ul></p>'
-                document.getElementById('generated-game').innerHTML = generatedGame
+                document.getElementById( targetField ).innerHTML = generatedGame
             }
             function cardImage(p1) {
                 if (p1["suit"] == "c" || p1["suit"] == "m" || p1["suit"] == "r" || p1["suit"] == "t")
