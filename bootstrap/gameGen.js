@@ -118,7 +118,7 @@ function togglediv(id) {
                     '<li>' + schemes[2][1] + ' (' + suitImage(schemes[2][0]) + ')<input type="checkbox" class="toggle" id="scheme3-text-cb" '+checkedState+' onclick="togglediv(\'scheme3-text\')"><div class="scheme-text" id="scheme3-text">' + schemes[2][2] + '</div></li>' +
                     '<li>' + schemes[3][1] + ' (' + suitImage(schemes[3][0]) + ')<input type="checkbox" class="toggle" id="scheme4-text-cb" '+checkedState+' onclick="togglediv(\'scheme4-text\')"><div class="scheme-text" id="scheme4-text">' + schemes[3][2] + '</div></li>' +
                     '<li>' + schemes[4][1] + ' (' + suitImage(schemes[4][0]) + ')<input type="checkbox" class="toggle" id="scheme5-text-cb" '+checkedState+' onclick="togglediv(\'scheme5-text\')"><div class="scheme-text" id="scheme5-text">' + schemes[4][2] + '</div></li>' +
-                    '</ul></p>'
+                    '</ul></p>' +
                     '</div></div>' + 
                     
                 }
