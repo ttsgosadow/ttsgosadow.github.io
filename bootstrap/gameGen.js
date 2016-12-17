@@ -119,8 +119,7 @@ function togglediv(id) {
                     '<li>' + schemes[3][1] + ' (' + suitImage(schemes[3][0]) + ')<input type="checkbox" class="toggle" id="scheme4-text-cb" '+checkedState+' onclick="togglediv(\'scheme4-text\')"><div class="scheme-text" id="scheme4-text">' + schemes[3][2] + '</div></li>' +
                     '<li>' + schemes[4][1] + ' (' + suitImage(schemes[4][0]) + ')<input type="checkbox" class="toggle" id="scheme5-text-cb" '+checkedState+' onclick="togglediv(\'scheme5-text\')"><div class="scheme-text" id="scheme5-text">' + schemes[4][2] + '</div></li>' +
                     '</ul></p>' +
-                    '</div></div>' + 
-                    
+                    '</div></div>'
                 }
                 document.getElementById( targetField ).innerHTML = generatedGame
             }
