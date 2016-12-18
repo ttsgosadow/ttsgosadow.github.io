@@ -105,12 +105,12 @@ function togglediv(id) {
                 //hier ui maken 
                 var checkedState = ""
                 var generatedGame = '<div class="alert alert-success" role="alert"><strong>Succes!</strong> The fickle winds of fate yielded these flips for deployment, strategy and schemes.</div>' + 
-                    '<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">'+
+                    '<div class="panel panel-default">' +
                     '<p>Use this <a href="' + gameLink + '">perma-link</a> to the game.</p>' +
+                    '<div class="panel-heading"><h3 class="panel-title">'+
                     '<strong>Game: ' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</strong>' +
-                    ' <span class="pull-right"><small>Use this <a href="' + gameLink + '">perma-link</a> to the game</small></span>' +
-                    '</h3></div><div class="panel-body">' + 
                     '<span class="pull-right"><a href="#" onClick="toggleAll(true);return false;">Show</a>/<a href="#" onClick="toggleAll(false);return false;">hide</a> all</span>' +
+                    '</h3></div><div class="panel-body">' + 
                     '<p><strong>Deployment:</strong> ' + deployment[0] + ' (' + cardImage(deploymentCard) + ')<input type="checkbox" class="pull-right" id="deployment-text-cb" '+checkedState+' onclick="togglediv(\'deployment-text\')"><div class="deployment-text" id="deployment-text">' + deployment[1] + '</div></p>' +
                     '<p><strong>Strategy:</strong> ' + strategy[0] + ' (' + cardImage(strategyCard) + ')<input type="checkbox" class="pull-right" id="strategy-text-cb" '+checkedState+' onclick="togglediv(\'strategy-text\')"><div class="strategy-text" id="strategy-text">' + strategy[1] + '</div></p>' +
                     '<p><strong>Schemes:</strong> (' + cardImage(schemeCard1) + ',' + cardImage(schemeCard2) + ')<ul>' +
