@@ -28,7 +28,7 @@ function togglediv(id) {
             function getURLParameter() {
                var URIcomp = decodeURIComponent((new RegExp('[?|&]' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || false;
   
-                return URIcomp.match( /((1|2|3|4|5|6|7|8|9|10|11|12|13)[cmrt]|bj|rj)/g );    
+                return URIcomp.match( /(\d+[cmrt]|bj|rj)/g );    
             }
             function newGame() {
                 var deck = newDeck()
