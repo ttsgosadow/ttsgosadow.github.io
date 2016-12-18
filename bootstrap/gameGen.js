@@ -92,6 +92,7 @@ function togglediv(id) {
                 var strategyCard = cardFromText(URIparam[1])
                 var schemeCard1 = cardFromText(URIparam[2]) 
                 var schemeCard2 = cardFromText(URIparam[3])
+                alert( URIparam )
                 if (!deploymentCard || !strategyCard || !schemeCard1 || !schemeCard2)
                 {
                   var generatedGame = '<div class="alert alert-warning" role="alert"><strong>Generate game</strong> Press the button above to generate a game!</div>'
