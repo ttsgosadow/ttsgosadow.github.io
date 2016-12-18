@@ -87,8 +87,7 @@ function togglediv(id) {
                 return array;
             }
             function generateGame( targetField ) {
-                var URIparam = getURLParameter()
-                alert( URIparam )
+              var URIparam = getURLParameter()
               var failedGame = false
               if( URIparam.length == 4 )
               {
