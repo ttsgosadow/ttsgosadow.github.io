@@ -102,7 +102,8 @@ function togglediv(id) {
                 
                 if ( failedGame )
                 {
-                  var generatedGame = '<div class="alert alert-warning" role="alert"><strong>Generate game</strong> Press the button above to generate a game!</div>'
+                  var generatedGame = '<p>Use this to generate a game, and share it with your opponent. It\'s something I find very useful for setting up a game in advance, to keep al the game time for playing instead of also preparing the scenario, crews, etc.' +
+                      '<div class="alert alert-warning" role="alert"><strong>Generate game</strong> Press the button above to generate a game!</div></p>'
                   }
               else
               {
