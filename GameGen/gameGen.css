@@ -28,6 +28,10 @@ input[type=checkbox].css-checkbox {
 				user-select: none;
 			}
 
+input[type=checkbox] {
+	visibility: hidden;
+}
+
 /* SLIDE THREE */
 .slideThree {
 	width: 80px;
