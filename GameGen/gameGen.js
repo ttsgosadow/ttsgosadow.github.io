@@ -117,7 +117,7 @@ function togglediv(id) {
                     '<div class="panel panel-default">' +
                     '<div class="panel-heading"><h3 class="panel-title">'+
                     '<strong>Game: ' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</strong>' +
-                    '<span class="pull-right"><a href="#" onClick="toggleAll(true);return false;">Show</a>/<a href="#" onClick="toggleAll(false);return false;">hide</a> all</span>' +
+                    '<div class="slideThree pull-right"><input type="checkbox" value="None" id="slideThree" name="check" checked /><label for="slideThree"></label> all</div>' +
                     '</h3></div><div class="panel-body">' + 
                     '<p><strong>Deployment:</strong> ' + deployment[0] + ' (' + cardImage(deploymentCard) + ')<input type="checkbox" class="pull-right" id="deployment-text-cb" '+checkedState+' onclick="togglediv(\'deployment-text\')"><blockquote class="small" id="deployment-text">' + deployment[1] + '</blockquote></p>' +
                     '<p><strong>Strategy:</strong> ' + strategy[0] + ' (' + cardImage(strategyCard) + ')<input type="checkbox" class="pull-right" id="strategy-text-cb" '+checkedState+' onclick="togglediv(\'strategy-text\')"><blockquote class="small" id="strategy-text">' + strategy[1] + '</blockquote></p>' +
