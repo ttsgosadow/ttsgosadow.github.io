@@ -112,8 +112,8 @@ function togglediv(id) {
                 var gameLink = "?" + URIparam[0] + URIparam[1] + URIparam[2] + URIparam[3]
                 //hier ui maken 
                 var checkedState = ""
-                var generatedGame = '<div class="alert alert-success" role="alert"><strong>Succes!</strong> The fickle winds of fate yielded these flips for deployment, strategy and schemes.</div>' + 
-                    '<p>Use this <a href="' + gameLink + '">perma-link</a> to the game.</p>' +
+                var generatedGame = '<div class="alert alert-success" role="alert"><strong>Success!</strong> The fickle winds of fate yielded these flips for deployment, strategy and schemes.</div>' + 
+                    '<p>Use this <a href="' + gameLink + '">perma-link</a> to share the game setup.</p>' +
                     '<div class="panel panel-default">' +
                     '<div class="panel-heading"><h3 class="panel-title">'+
                     '<strong>Game: ' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</strong>' +
