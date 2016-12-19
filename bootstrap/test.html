@@ -76,7 +76,24 @@
         <h1>Malifaux Game Generator</h1>
       </div>
       <p>This is a game generator for Malifaux second edition (M2E) using the Gaining Grounds 2016 (GG16) rules.</p>
-      <p><button type="button" class="btn btn-lg btn-primary"  onClick="newGame();">Generate new game</button></p>
+      <p><button type="button" class="btn btn-lg btn-primary"  onClick="newGame();">Generate a new GG16 game</button></p>
+      
+      <p>
+        <div class="btn-group">
+  <button type="button" class="btn btn-primary">Action</button>
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onClick="newGame()">Generate a new GG16 game</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+      </p>
   
       <p class="generated-game" id="generated-game">
         Click the button above to generate a game.
