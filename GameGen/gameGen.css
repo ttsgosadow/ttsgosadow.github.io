@@ -1,0 +1,24 @@
+.example {
+  margin: 50px;
+}
+.css-label {
+  cursor: pointer;
+}
+.css-checkbox {
+  display: none;
+}
+.glyphicon-minus {
+  display: none;
+}
+.css-checkbox:checked + .css-label .glyphicon-minus {
+  display: inline;
+}
+.css-checkbox:checked + .css-label .glyphicon-plus {
+  display: none;
+}
+.css-content {
+  display: none;
+}
+.css-checkbox:checked ~ .css-content {
+  display: block;
+}
