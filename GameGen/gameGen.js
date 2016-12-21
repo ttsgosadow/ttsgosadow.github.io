@@ -113,7 +113,7 @@ function togglediv(id) {
                 //hier ui maken 
                 var checkedState = ""
                 var generatedGame = '<div class="alert alert-success" role="alert"><strong>Success!</strong> The fickle winds of fate yielded these flips for deployment, strategy and schemes.</div>' + 
-                    '<p>Use this <a data-toggle="popover" href="#" title="Perma-link" data-content="<a href="' + gameLink + '>">' + gameLink + '</a>">perma-link</a> to share the game setup.</p>' +
+                    '<p>Use this <a data-toggle="popover" href="#" title="Perma-link" data-content="<a href="' + gameLink + '>' + gameLink + '</a>">perma-link</a> to share the game setup.</p>' +
                     '<div class="panel panel-default">' +
                     '<div class="panel-heading"><h3 class="panel-title">'+
                     '<strong>Game: ' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</strong>' +
