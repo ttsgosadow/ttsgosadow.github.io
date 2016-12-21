@@ -1,3 +1,7 @@
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
 function togglediv(id) {
                 var div = document.getElementById(id);
                 if (document.getElementById(id + '-cb').checked)
