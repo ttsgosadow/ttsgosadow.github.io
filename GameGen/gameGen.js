@@ -1,3 +1,7 @@
+function copyToClipboard(text) {
+  window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+}
+
 function togglediv(id) {
                 var div = document.getElementById(id);
                 if (document.getElementById(id + '-cb').checked)
