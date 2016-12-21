@@ -28,3 +28,24 @@
 .css-checkbox:checked + .css-label .glyphicon-collapse-up {
   display: none;
 }
+
+.glyphicon-menu-down {
+  display: none;
+}
+.css-checkbox:checked + .css-label .glyphicon-menu-down {
+  display: inline;
+}
+.css-checkbox:checked + .css-label .glyphicon-menu-up {
+  display: none;
+}
+
+
+.glyphicon-triangle-bottom {
+  display: none;
+}
+.css-checkbox:checked + .css-label .glyphicon-triangle-bottom {
+  display: inline;
+}
+.css-checkbox:checked + .css-label .glyphicon-triangle-top {
+  display: none;
+}
