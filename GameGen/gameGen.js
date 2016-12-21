@@ -117,7 +117,7 @@ function togglediv(id) {
                 //hier ui maken 
                 var checkedState = ""
                 var generatedGame = '<div class="alert alert-success" role="alert"><strong>Success!</strong> The fickle winds of fate yielded these flips for deployment, strategy and schemes.</div>' + 
-                    '<p>Use this <a href="#" onClick="copyToClipboard(\'https://ttsgosadow.github.io/GameGen/' + gameLink + '\')">perma-link</a> to share the game setup.</p>' +
+                    '<p>Use this <a href="#" onClick="copyToClipboard(\'https://ttsgosadow.github.io/GameGen/' + gameLink + '\')">perma-link <span class="glyphicon glyphicon-new-window"></span></a> to share the game setup.</p>' +
                     '<div class="panel panel-default">' +
                     '<div class="panel-heading"><h3 class="panel-title">'+
                     '<strong>Game: ' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</strong>' +
