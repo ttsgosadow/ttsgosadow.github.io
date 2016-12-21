@@ -17,3 +17,10 @@
 .css-checkbox:checked + .css-label .glyphicon-plus {
   display: none;
 }
+
+.css-checkbox:checked + .css-label .glyphicon-collapse-down {
+  display: inline;
+}
+.css-checkbox:checked + .css-label .glyphicon-collapse-up {
+  display: none;
+}
