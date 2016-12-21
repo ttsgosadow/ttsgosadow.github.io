@@ -19,12 +19,12 @@
 }
 
 
-.glyphicon-collapse-up {
+.glyphicon-collapse-down {
   display: none;
 }
-.css-checkbox:checked + .css-label .glyphicon-collapse-up {
+.css-checkbox:checked + .css-label .glyphicon-collapse-down {
   display: inline;
 }
-.css-checkbox:checked + .css-label .glyphicon-collapse-down {
+.css-checkbox:checked + .css-label .glyphicon-collapse-up {
   display: none;
 }
