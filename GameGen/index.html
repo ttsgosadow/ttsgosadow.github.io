@@ -29,6 +29,9 @@
   $('[data-toggle="popover"]').popover()
 })
     </script>
+    <script>
+      new Clipboard('.clipboard');
+    </script>
   </head>
 
   <body onLoad="generateGame('generated-game')">
@@ -78,7 +81,13 @@
         Click the button above to generate a game.
       </p>
     
-      <a href="#" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</a>
+      <!-- Target -->
+<input id="foo" value="https://github.com/zenorocha/clipboard.js.git">
+
+<!-- Trigger -->
+<button class="clipboard" data-clipboard-target="#foo">
+    <img src="assets/clippy.svg" alt="Copy to clipboard">
+</button>
       
     </div> <!-- /container -->
 
