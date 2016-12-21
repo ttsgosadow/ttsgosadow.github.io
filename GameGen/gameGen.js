@@ -141,9 +141,11 @@ function togglediv(id) {
                     '<li class="list-group-item">' + schemes[4][1] + ' (' + suitImage(schemes[4][0]) + ')<div class="cb-span pull-right"><input type="checkbox" class="css-checkbox" id="scheme5-text-cb" '+checkedState+' onclick="togglediv(\'scheme5-text\')"><label for="scheme5-text-cb" class="css-label"><span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></label></div><div class="well well-sm small" id="scheme5-text">' + schemes[4][2] + '</div></li>' +
                     '</ul></p>' +
                     '</div></div>'
-                }
-                document.getElementById( targetField ).innerHTML = generatedGame
-              toggleAll( false )
+              }
+              document.getElementById( targetField ).innerHTML = generatedGame
+              
+              if( !failedGame )  
+                toggleAll( false )
             }
             function cardImage(p1) {
                 if (p1["suit"] == "c" || p1["suit"] == "m" || p1["suit"] == "r" || p1["suit"] == "t")
