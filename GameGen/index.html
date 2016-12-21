@@ -31,9 +31,6 @@
   $('[data-toggle="popover"]').popover()
 })
     </script>
-      <script>
-        new Clipboard('.btn');
-      </script>
   </head>
 
   <body onLoad="generateGame('generated-game')">
@@ -100,6 +97,7 @@
         <span id="visible-input">https://ttsgosadow.github.io/GameGen/[url]</span>
       </div>
       <div class="modal-footer">
+        <button onClick="new Clipboard('.btn');">load</button>
         <button type="button" class="btn btn-primary"  data-clipboard-text="Just because you can doesn't mean you should — clipboard.js">Copy to clipboard</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
