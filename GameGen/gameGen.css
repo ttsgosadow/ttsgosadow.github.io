@@ -13,9 +13,3 @@
 .css-checkbox:checked + .css-label .glyphicon-plus {
   display: none;
 }
-.css-content {
-  display: none;
-}
-.css-checkbox:checked ~ .css-content {
-  display: block;
-}
