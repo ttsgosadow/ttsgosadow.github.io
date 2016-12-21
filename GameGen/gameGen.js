@@ -31,8 +31,8 @@ function togglediv(id) {
             }
             function getURLParameter() {
                var URIcomp = decodeURIComponent((new RegExp('[?|&]' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || false;
-  
-                return URIcomp.match( /(\d+[cmrt]|bj|rj)/g );    
+               alert( URIcomp );
+               return URIcomp.match( /(\d+[cmrt]|bj|rj)/g );    
             }
             function newGame() {
                 var deck = newDeck()
