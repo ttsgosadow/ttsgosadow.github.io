@@ -18,6 +18,15 @@
   display: none;
 }
 
+.glyphicon-chevron-down {
+  display: none;
+}
+.css-checkbox:checked + .css-label .glyphicon-chevron-down {
+  display: inline;
+}
+.css-checkbox:checked + .css-label .glyphicon-chevron-up {
+  display: none;
+}
 
 .glyphicon-collapse-down {
   display: none;
