@@ -18,6 +18,10 @@
   display: none;
 }
 
+
+.glyphicon-collapse-down {
+  display: none;
+}
 .css-checkbox:checked + .css-label .glyphicon-collapse-down {
   display: inline;
 }
