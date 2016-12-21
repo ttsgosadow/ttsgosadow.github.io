@@ -30,9 +30,11 @@ function togglediv(id) {
                 document.getElementById("scheme5-text").style.display = toggleTo
             }
             function getURLParameter() {
-               var URIcomp = decodeURIComponent((new RegExp('[?|&]' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || false;
-               alert( URIcomp );
-               return URIcomp.match( /(\d+[cmrt]|bj|rj)/g );    
+              var URIcomp = decodeURIComponent((new RegExp('[?|&]' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || false;
+              if( URIcomp )
+                return URIcomp.match( /(\d+[cmrt]|bj|rj)/g )
+              else
+                return Array(0)
             }
             function newGame() {
                 var deck = newDeck()
