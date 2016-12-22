@@ -116,8 +116,7 @@ function togglediv(id) {
                 var strategy = getStrategy(strategyCard["suit"])
                 var schemes = getSchemes(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"])
                 var gameLink = "?" + URIparam[0] + URIparam[1] + URIparam[2] + URIparam[3]
-                alert( document.getElementById( 'visible-input' ).value )
-                document.getElementById( 'visible-input' ).value = 'https://ttsgosadow.github.io/GameGen/' + gameLink
+                document.getElementById( 'visible-input' ).innerHTML = 'https://ttsgosadow.github.io/GameGen/' + gameLink
                 //hier ui maken 
                 var checkedState = ""
                 var generatedGame = '<div class="alert alert-success" role="alert"><strong>Success!</strong> The fickle winds of fate yielded these flips for deployment, strategy and schemes.</div>' + 
