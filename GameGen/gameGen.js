@@ -116,17 +116,13 @@ function togglediv(id) {
                 var strategy = getStrategy(strategyCard["suit"])
                 var schemes = getSchemes(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"])
                 var gameLink = "?" + URIparam[0] + URIparam[1] + URIparam[2] + URIparam[3]
+                document.getElementById( 'visible-input' ).value = 'https://ttsgosadow.github.io/GameGen/' + gameLink
                 //hier ui maken 
                 var checkedState = ""
                 var generatedGame = '<div class="alert alert-success" role="alert"><strong>Success!</strong> The fickle winds of fate yielded these flips for deployment, strategy and schemes.</div>' + 
                     '<p>Use this ' +
                     '<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Perma-link <span class="glyphicon glyphicon-new-window"></span></button> ' +
                     'to share the game setup.</p>' +
-                    '<!-- Modal --><div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-                    '<h4 class="modal-title" id="myModalLabel">Copy Perma-link</h4></div>' +
-                    '<div class="modal-body"><span id="visible-input">https://ttsgosadow.github.io/GameGen/' + gameLink + '</span></div>' +
-                    '<div class="modal-footer"><button type="button" id="btn-copy-clipboard" class="btn btn-primary btn-clipboard" onClick="new Clipboard(\'.btn-clipboard\');" data-clipboard-target="#visible-input" data-toggle="popover" title="Copied to clipboard" data-content="The perma-link has been copied to your clipboard!">Copy to clipboard</button><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>' +
-                    '<script>$(function () {$(\'[data-toggle="popover"]\').popover()})</script>' +
                     '<div class="panel panel-default">' +
                     '<div class="panel-heading"><h3 class="panel-title">'+
                     '<strong>Game: ' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</strong>' +
