@@ -75,6 +75,22 @@
       <p>
         <button type="button" class="btn btn-lg btn-primary" onClick="newGame('GG16')">Generate a new GG16 game</button>
       </p>
+      
+           <p>
+        <div class="btn-group">
+  <button type="button" class="btn btn-lg btn-primary" onClick="newGame('GG17')">Generate a new GG17 game</button>
+  <button type="button" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#" onClick="newGame('GG16')">Generate a new <em>GG16</em> game</a></li>
+    <li><a href="#" onClick="newGame('GG17')">Generate a new <em>GG17</em> game</a></li>
+    <li role="separator" class="divider"></li>
+    <li>Select the type of game to generate above, or just click the button straight away</li>
+  </ul>
+</div>
+      </p>
   
       <p class="generated-game" id="generated-game">
         Click the button above to generate a game.
