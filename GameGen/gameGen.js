@@ -1,7 +1,3 @@
-function copyToClipboard(text) {
-  window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
-}
-
 function togglediv(id) {
                 var div = document.getElementById(id);
                 if (document.getElementById(id + '-cb').checked)
@@ -36,7 +32,7 @@ function togglediv(id) {
               else
                 return Array(0)
             }
-            function newGame() {
+            function newGame( gameType ) {
                 var deck = newDeck()
                 shuffle(deck)
                 var deploymentCard = topCard(deck)
@@ -49,7 +45,7 @@ function togglediv(id) {
                 var schemeCard2 = topCard(deck)
                 while (schemeCard2["card"] == "bj" || schemeCard2["card"] == "rj")
                     schemeCard2 = topCard(deck)
-                window.location.href = "?" + deploymentCard["card"] + strategyCard["card"] + schemeCard1["card"] + schemeCard2["card"]
+                window.location.href = "?" + gameType + deploymentCard["card"] + strategyCard["card"] + schemeCard1["card"] + schemeCard2["card"]
             }
             function newDeck() {
                 return ["1c", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "11c", "12c", "13c",
