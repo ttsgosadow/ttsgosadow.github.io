@@ -112,20 +112,23 @@ function togglediv(id) {
                 if( gameType == 'GG16' )
                 {
                   var deployment = getDeployment(deploymentCard["value"])
-                var strategy = getStrategyGG16(strategyCard["suit"])
-                var schemes = getSchemesGG16(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"])
+                  var strategy = getStrategyGG16(strategyCard["suit"])
+                  var schemes = getSchemesGG16(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"])
+                  var gameType = 'GG16'
                 }
                 else if (gameType == 'GG17' )
                 {
                   var deployment = getDeployment(deploymentCard["value"])
                   var strategy = getStrategyGG17(strategyCard["suit"])
                   var schemes = getSchemesGG17(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"])
+                  var gameType = 'GG17'
                 }
                 else if( gameType == 'B1' )
                 {
                   var deployment = getDeployment(deploymentCard["value"])
                   var strategy = getStrategyBook1(strategyCard["suit"])
                   var schemes = getSchemesBook1(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"])
+                  var gameType = 'Book 1'
                 }
                 else
                     failedGame = true
@@ -141,7 +144,7 @@ function togglediv(id) {
                     'to share the game setup.</p>' +
                     '<div class="panel panel-default">' +
                     '<div class="panel-heading"><h3 class="panel-title">'+
-                    '<strong>Game: ' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</strong>' +
+                    '<strong>' + gameType + ' game: ' + cardImage(deploymentCard) + ' ' + cardImage(strategyCard) + ' ' + cardImage(schemeCard1) + ' ' + cardImage(schemeCard2) + '</strong>' +
                     '<span class="pull-right"><a href="#" onClick="toggleAll(true);return false;">Show</a>/<a href="#" onClick="toggleAll(false);return false;">hide</a> all</span>'  +
                     '</h3></div><div class="panel-body">' + 
                     '<p><strong>Deployment:</strong> ' + deployment[0] + ' (' + cardImage(deploymentCard) + ')<span class="cb-span pull-right"><input type="checkbox" class="css-checkbox" id="deployment-text-cb" '+checkedState+' onclick="togglediv(\'deployment-text\')"><label for="deployment-text-cb" class="css-label"><span class="glyphicon glyphicon-triangle-top"></span><span class="glyphicon glyphicon-triangle-bottom"></span></label></span><div class="well well-sm small" id="deployment-text">' + deployment[1] + '</div></p>' +
