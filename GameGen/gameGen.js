@@ -121,6 +121,12 @@ function togglediv(id) {
                   var strategy = getStrategyGG17(strategyCard["suit"])
                   var schemes = getSchemesGG17(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"])
                 }
+                else if( gameType == 'B1' )
+                {
+                  var deployment = getDeployment(deploymentCard["value"])
+                  var strategy = getStrategyBook1(strategyCard["suit"])
+                  var schemes = getSchemesBook1(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"])
+                }
                 else
                     failedGame = true
                 
