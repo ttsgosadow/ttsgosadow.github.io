@@ -1,7 +1,7 @@
 <strategies type="book1">
   <strategy>
     <suit>r</suit>
-    <strategy>Turf War</strategy>
+    <name>Turf War</name>
     <description>
       <em>Setup</em><br />
       Place a single Turf Marker at the Center of the table.<br /><br />
@@ -11,7 +11,7 @@
   </strategy>
   <strategy>
     <suit>c</suit>
-    <strategy>Reckoning</strategy>
+    <name>Reckoning</name>
     <description>
       <em>Victory Points</em><br />
       At the end of every Turn, after the first, a Crew earns 1 VP if it killed or sacrificed two or more enemy models during that Turn.<br /><br />
