@@ -106,7 +106,7 @@ function generateGame( targetField )
 {
   var URIparam = getURLParameter()
   var failedGame = false
-  var gameType == 'none'
+  var gameType = 'none'
   if( URIparam.length == 5 )
   {
     var gameType = URIparam[0]
