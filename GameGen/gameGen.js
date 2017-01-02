@@ -333,7 +333,7 @@ function getSchemes(s1, v1, s2, v2, gameType)
     }
   }
   
-  if( gameType = 'GG17' )
+  if( gameType == 'GG17' )
   {
     var schemes = {
       always: ["always", "Claim Jump", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br />At the end of every Turn after the first, if this Crew has at least two Scheme Markers within 2\" of the Centerline of the board, not within 2\" of an enemy model, and not within 4\" of another friendly Scheme Marker, this Crew scores 1 VP and removes all friendly Scheme Markers within 2\" of the Centerline."],
