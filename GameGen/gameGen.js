@@ -106,6 +106,7 @@ function generateGame( targetField )
 {
   var URIparam = getURLParameter()
   var failedGame = false
+  var gameType == 'none'
   if( URIparam.length == 5 )
   {
     var gameType = URIparam[0]
@@ -125,10 +126,7 @@ function generateGame( targetField )
 
     if( gameType == 'B1' )
       var gameType = 'Book 1'
-  }
-  else
-      failedGame = true
-
+      
     var gameLink = "?" + URIparam[0] + URIparam[1] + URIparam[2] + URIparam[3] + URIparam[4]
     document.getElementById( 'visible-input' ).innerHTML = 'https://ttsgosadow.github.io/GameGen/' + gameLink
 
@@ -154,11 +152,15 @@ function generateGame( targetField )
         '</ul></p>' +
         '</div></div>'
   }
+  else
+      failedGame = true
 
   if ( failedGame )
+  {
     var generatedGame = '<p>Use this to generate a game, and share it with your opponent. It\'s very useful for setting up a game in advance, to keep al the game time for playing instead of also preparing the scenario, crews, etc.' +
         '<div class="alert alert-warning" role="alert"><strong>Generate game</strong> Press the button above to generate a game!</div></p>'
-  
+  }
+
   document.getElementById( targetField ).innerHTML = generatedGame
 
   if( !failedGame )  
