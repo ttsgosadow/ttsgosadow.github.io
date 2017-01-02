@@ -121,8 +121,8 @@ function generateGame( targetField )
   if( gameType == 'GG16' || gameType == 'GG17' || gameType == 'B1' )
   {
     var deployment = getDeployment(deploymentCard["value"], gameType)
-    var strategy = getStrategyGG16(strategyCard["suit"], gameType)
-    var schemes = getSchemesBook1(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"], gameType)
+    var strategy = getStrategy(strategyCard["suit"], gameType)
+    var schemes = getSchemes(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"], gameType)
 
     if( gameType == 'B1' )
       var gameType = 'Book 1'
