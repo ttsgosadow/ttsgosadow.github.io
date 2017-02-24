@@ -242,7 +242,7 @@ function getDeployment( value, gameType ) {
 
 function getStrategy( suit, value, gameType ) 
 {
-  if( gameType == 'B1' || ( gameType == 'GG17' && value % 2 == 0 ) )
+  if( gameType == 'B1' || ( gameType == 'GG17' && isEven( value ) ) )
   {
     var strategy = {
       bj: ["Stake a Claim", "<em>Special Rules</em><br />A model may take a (2) Interact Action to discard all Claim Markers within 6\" of itself, and then place a Claim Marker in base contact with itself.<br /><br /><em>Victory Points</em><br />At the end of each Turn after the first, a Crew earns 1 VP if there are more Claim Markers on the Enemy Half of the table than its own."],
@@ -382,4 +382,12 @@ function getSchemes(s1, v1, s2, v2, gameType)
   pool.unshift(p0)
   
   return [schemes[pool[1]], schemes[pool[2]], schemes[pool[3]], schemes[pool[4]], schemes[pool[0]]]
+}
+
+function isEven(n) {
+   return n % 2 == 0;
+}
+
+function isOdd(n) {
+   return Math.abs(n % 2) == 1;
 }
