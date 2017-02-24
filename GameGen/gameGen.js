@@ -87,12 +87,13 @@ function topCard(array)
 
 function shuffle(array) 
 {
-  var currentIndex = array.length,
-      temporaryValue, randomIndex;
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
+    array.sort(function(a, b){return 0.5 - Math.random()})
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) 
+    {
       // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * array.length);
+      randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
       // And swap it with the current element.
       temporaryValue = array[currentIndex];
