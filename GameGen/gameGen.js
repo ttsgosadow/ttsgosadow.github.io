@@ -87,7 +87,6 @@ function topCard(array)
 
 function shuffle(array) 
 {
-    array.sort(function(a, b){return 0.5 - Math.random()})
     var currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
     while (0 !== currentIndex) 
