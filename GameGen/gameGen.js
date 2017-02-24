@@ -121,7 +121,7 @@ function generateGame( targetField )
   if( gameType == 'GG16' || gameType == 'GG17' || gameType == 'B1' )
   {
     var deployment = getDeployment(deploymentCard["value"], gameType)
-    var strategy = getStrategy(strategyCard["suit"], gameType)
+    var strategy = getStrategy(strategyCard["suit"], strategyCard["value"], gameType)
     var schemes = getSchemes(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"], gameType)
 
     if( gameType == 'B1' )
@@ -240,9 +240,9 @@ function getDeployment( value, gameType ) {
   return deployment[value]
 }
 
-function getStrategy( suit, gameType ) 
+function getStrategy( suit, value, gameType ) 
 {
-  if( gameType == 'B1' )
+  if( gameType == 'B1' || ( gameType == 'GG17' && value % 2 == 0 ) )
   {
     var strategy = {
       bj: ["Stake a Claim", "<em>Special Rules</em><br />A model may take a (2) Interact Action to discard all Claim Markers within 6\" of itself, and then place a Claim Marker in base contact with itself.<br /><br /><em>Victory Points</em><br />At the end of each Turn after the first, a Crew earns 1 VP if there are more Claim Markers on the Enemy Half of the table than its own."],
