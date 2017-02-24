@@ -254,7 +254,7 @@ function getStrategy( suit, value, gameType )
     }
   }
 
-  if( gameType == 'GG16' || gameType == 'GG17' )
+  if( gameType == 'GG16' )
   {
     var strategy = {
       bj: ["Collect the Bounty", "<em>Special</em><br />Whenever a model is reduced to 0 Wounds by a non-Peon model, the Crew which reduced it to 0 Wounds gains a number of Bounty Points depending on the type of model which was reduced to 0 Wounds, so long as the Crew considered the model an enemy. Models are worth the following number of Bounty Points:<br />Peons: 0<br />Minions: 1<br />Enforcers: 2<br />Henchmen: 3<br />Masters: 4<br />At the end of each Turn, after calculating VP, reset each player to 0 Bounty Points.<br /><br /><em>Victory Points</em><br />At the end of every Turn after the first, the player with the most Bounty Points scores 1 VP. Either player may also score 1 VP if the opposing player has no models left in play. No more than 1 VP may be scored from this strategy per Turn. If both players still have models in play and they are tied for Bounty Points, neither will score any VP."],
@@ -266,7 +266,7 @@ function getStrategy( suit, value, gameType )
     }
   }
 
-  if( gameType == 'GG17' )
+  if( gameType == 'GG17' && !isEven( value ) )
   {
     var strategy = {
       bj: ["Collect the Bounty", "<em>Special</em><br />Whenever a model is reduced to 0 Wounds by a non-Peon model, the Crew which reduced it to 0 Wounds gains a number of Bounty Points depending on the type of model which was reduced to 0 Wounds, so long as the Crew considered the model an enemy. Models are worth the following number of Bounty Points:<br />Peons: 0<br />Minions: 1<br />Enforcers: 2<br />Henchmen: 3<br />Masters: 4<br />At the end of each Turn, after calculating VP, reset each player to 0 Bounty Points.<br /><br /><em>Victory Points</em><br />At the end of every Turn after the first, the player with the most Bounty Points scores 1 VP. Either player may also score 1 VP if the opposing player has no models left in play. No more than 1 VP may be scored from this strategy per Turn. If both players still have models in play and they are tied for Bounty Points, neither will score any VP."],
@@ -384,11 +384,12 @@ function getSchemes(s1, v1, s2, v2, gameType)
   return [schemes[pool[1]], schemes[pool[2]], schemes[pool[3]], schemes[pool[4]], schemes[pool[0]]]
 }
 
-function isEven(n) {
-    alert( n + ' is even? '+(n%2==0) )
+function isEven(n) 
+{
    return n % 2 == 0;
 }
 
-function isOdd(n) {
+function isOdd(n) 
+{
    return Math.abs(n % 2) == 1;
 }
