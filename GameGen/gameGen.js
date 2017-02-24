@@ -385,7 +385,7 @@ function getSchemes(s1, v1, s2, v2, gameType)
 }
 
 function isEven(n) {
-    alert( n + ' is even? '+(n%2) )
+    alert( n + ' is even? '+(n%2==0) )
    return n % 2 == 0;
 }
 
