@@ -40,8 +40,6 @@ function playerSelectorChanged( selectorID )
    var players = getPlayers()
    var selectedPlayer = players[ selectorID.value ]
    
-   alert( selectedPlayer.toString() )
-   
    playerAssetsText = "<h2>Assets controlled by " + selectedPlayer[0] + "</h2>"
    
    for( i= 1; i < selectedPlayer.length; i++ )
@@ -50,7 +48,6 @@ function playerSelectorChanged( selectorID )
    }
    
    var selectorText = selectorID.id + 'Text'
-   alert( selectorText )
    
    document.getElementById( selectorText ).innerHTML = playerAssetsText
 }
