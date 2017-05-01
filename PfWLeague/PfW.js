@@ -50,6 +50,7 @@ function playerSelectorChanged( selectorID )
    }
    
    var selectorText = selectorID+'Text'
+   alert( selectorText )
    
    document.getElementById( selectorText ).innerHTML = playerAssetsText
 }
