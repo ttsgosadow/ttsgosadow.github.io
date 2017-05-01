@@ -37,7 +37,7 @@ function assetCard( asset )
   return aCard
 }
 
-function eventCard()
+function eventCard( eventID )
 {
   var events = getEvents()
   
