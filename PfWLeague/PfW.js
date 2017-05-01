@@ -7,6 +7,8 @@ function getPlayers()
    3: [ "Sander", [2,2] , [6,3] , [10,1] , ['r',2] ]
   }
    
+   alert( players.toString() )
+   
   return players
 }
 
