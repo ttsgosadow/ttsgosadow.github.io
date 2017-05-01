@@ -24,10 +24,11 @@ function playerSelector( selectorID )
 {
    var players = getPlayers()
    var selector = '<select class="form-control" id="' + selectorID + '" onChange="playerSelectorChanged(\'' + selectorID + '\')">'
+   selector += '<option value="">-- select player --</option>'
    
    for( i = 0; i < players.length; i++ )
    {
-      selector += '<option>'+players[i][0]+'</option>'
+      selector += '<option value="' + i + '">'+players[i][0]+'</option>'
    }
    selector += '</select>'
    
