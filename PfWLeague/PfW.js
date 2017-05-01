@@ -23,9 +23,13 @@ function generateLeague()
 function playerSelector( selectorID )
 {
    var players = getPlayers()
-   var selector = '<select class="form-control" id="' + selectorID + '">' +
-   '<option>'+players[0][0]+'</option>' +
-   '</select>'
+   var selector = '<select class="form-control" id="' + selectorID + '">'
+   
+   for( i=0; 1<players.length;i++ )
+   {
+      selector += '<option>'+players[i][0]+'</option>' +
+   }
+   selector += '</select>'
    
    return selector
 }
