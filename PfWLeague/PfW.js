@@ -10,7 +10,7 @@ function getPlayers()
 
 function generateLeague()
 {
-  eventCard()
+  document.getElementById( 'event' ).innerHTML = eventCard( 'dragon' )
   
   assetSelectors( players )
  
@@ -27,19 +27,23 @@ function assetList()
  
 }
 
-function assetCard()
+function assetCard( asset )
 {
+  var assets = getAssets()
   
+  var aCard = '<h4>' + assets[ asset ][0] + ' <small>flip: ' + assets[ asset ][1] + '</small></h4>' + assets[ asset ][2] +
+      '<br />Value: ' + assets[ asset ][3]
+  
+  return aCard
 }
 
 function eventCard()
 {
-  var eventID = 0
   var events = getEvents()
   
   var eCard = '<h3>' + events[ eventID ][ 1 ] + ' <small>' + events[ eventID ][ 2 ] + '</small></h3>' + events[ eventID ][ 3 ]
   
-  document.getElementById( 'event' ).innerHTML = eCard
+  return eCard
 }
 
 function getEvents()
