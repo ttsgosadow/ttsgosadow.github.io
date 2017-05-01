@@ -1,26 +1,29 @@
 function getPlayers()
 {
    var players = {
-   gjalt: [ ['bj',1] , [3,2] , [7,3] , [11,1] , ['m',2] ],
-   tim: [ ['rj',3] , [4,4], [8,5] , [12,1] , ['c',2] ],
-   robin: [ [1,3] , [5,1] , [9,2] , [13,3] , ['t',1] ],
-   sander: [ [2,2] , [6,3] , [10,1] , ['r',2] ]
+   [ "Gjalt", ['bj',1] , [3,2] , [7,3] , [11,1] , ['m',2] ],
+   [ "Tim", ['rj',3] , [4,4], [8,5] , [12,1] , ['c',2] ],
+   [ "Robin", [1,3] , [5,1] , [9,2] , [13,3] , ['t',1] ],
+   [ "Sander", [2,2] , [6,3] , [10,1] , ['r',2] ]
   }
 }
 
 function generateLeague()
 {
   document.getElementById( 'event' ).innerHTML = eventCard( 'dragon' )
-  
-  var players = getPlayers()
-  assetSelectors( players )
+ 
+  document.getElementById( 'playerSelector1' ).innerHTML = playerSelector( 'playerSelector1' )
+  document.getElementById( 'playerSelector2' ).innerHTML = playerSelector( 'playerSelector2' )
  
   assetList()
 }
 
-function assetSelectors( players )
+function playerSelector( selectorID )
 {
- 
+   var players = getPlayers()
+   var selector = '<select class="form-control" id="' + selectorID + '">' +
+   '<option>'+players[0][0]+'</option>' +
+   '</select>'
 }
 
 function assetList()
