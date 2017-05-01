@@ -39,7 +39,7 @@ function playerSelectorChanged( selectorID )
 {
    if( selectorID.value == "" )
    {
-      playerAssetText = ""
+      playerAssetsText = ""
    }
    else
    {
