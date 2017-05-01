@@ -33,7 +33,7 @@
     </script>
   </head>
 
-  <body>
+  <body onLoad="generateLeage()">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -84,11 +84,7 @@
     
     <p>
     <div class="row">
-      <div class="col-md-4"><h3>Dragon Burning! <small>League Event</small></h3>
-    <i>A Dragon swoops across Malifaux, burning everything in its path! You have to save everything there is to be saved!</i><br />
-    <br />
-    All models begin the game with the Burning +1 Condition. During the first turn of the game, each model has Swift (+1 AP for movement).<br />
-    Each player selects 2 Assets from the opponent, if possible. You receive both these Assets if you win or draw the game.</div>
+      <div class="col-md-4 event" id="event"></div>
       <div class="col-md-4"><h3>Naam <small>Player 1</small></h3></div>
       <div class="col-md-4"><h3>Naam <small>Player 2</small></h3></div>
   </div>
