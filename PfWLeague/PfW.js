@@ -37,17 +37,24 @@ function playerSelector( selectorID )
 
 function playerSelectorChanged( selectorID )
 {
-   var players = getPlayers()
-   var selectedPlayer = players[ selectorID.value ]
-   
-   playerAssetsText = "<h3>Assets controlled by " + selectedPlayer[0] + "</h3>"
-   
-   for( i= 1; i < selectedPlayer.length; i++ )
+   if( selectorID.value == "" )
    {
-      playerAssetsText += assetCard( selectedPlayer[i][0], selectedPlayer[i][1] ) + "<br />"
+      playerAssetText = ""
    }
-   
-   var selectorText = selectorID.id + 'Text'
+   else
+   {
+      var players = getPlayers()
+      var selectedPlayer = players[ selectorID.value ]
+
+      playerAssetsText = "<h3>Assets controlled by " + selectedPlayer[0] + "</h3>"
+
+      for( i= 1; i < selectedPlayer.length; i++ )
+      {
+         playerAssetsText += assetCard( selectedPlayer[i][0], selectedPlayer[i][1] ) + "<br />"
+      }
+
+      var selectorText = selectorID.id + 'Text'
+    }
    
    document.getElementById( selectorText ).innerHTML = playerAssetsText
 }
