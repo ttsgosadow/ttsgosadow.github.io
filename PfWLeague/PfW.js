@@ -1,3 +1,12 @@
+function eventCard()
+{
+  var eventID = 0
+  
+  var eCard = '<h3>' + events[ eventID ][ 0 ] + ' <small>' + events[ eventID ][ 2 ] + '</small></h3>' + events[ eventID ][ 3 ]
+  
+  return eCard
+}
+
 var events = {
   event: ["Name", "Week", "Flavour", "Text", "Image"],
   dragon: ["Dragon Burning!", 1, "A Dragon swoops across Malifaux, burning everything in its path! You have to save everything there is to be saved!", "All models begin the game with the Burning +1 Condition. During the first turn of the game, each model has Swift (+1 AP for movement).<br />Each player antes 2 Assets, if possible. The attacker chooses the first two, the defender the second two.", '<img src="" />'],
