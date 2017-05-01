@@ -1,6 +1,30 @@
+function getPlayers()
+{
+   var players = {
+   gjalt: [ ['bj',1] , [3,2] , [7,3] , [11,1] , ['m',2] ],
+   tim: [ ['rj',3] , [4,4], [8,5] , [12,1] , ['c',2] ],
+   robin: [ [1,3] , [5,1] , [9,2] , [13,3] , ['t',1] ],
+   sander: [ [2,2] , [6,3] , [10,1] , ['r',2] ]
+  }
+}
+
 function generateLeague()
 {
- eventCard()
+  eventCard()
+  
+  assetSelectors( players )
+ 
+  assetList()
+}
+
+function assetSelectors( players )
+{
+ 
+}
+
+function assetList()
+{
+ 
 }
 
 function assetCard()
@@ -13,7 +37,7 @@ function eventCard()
   var eventID = 0
   var events = getEvents()
   
-  var eCard = '<h3>' + events[ eventID ][ 0 ] + ' <small>' + events[ eventID ][ 2 ] + '</small></h3>' + events[ eventID ][ 3 ]
+  var eCard = '<h3>' + events[ eventID ][ 1 ] + ' <small>' + events[ eventID ][ 2 ] + '</small></h3>' + events[ eventID ][ 3 ]
   
   document.getElementById( 'event' ).innerHTML = eCard
 }
