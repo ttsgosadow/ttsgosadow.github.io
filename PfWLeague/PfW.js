@@ -24,6 +24,8 @@ function playerSelector( selectorID )
    var selector = '<select class="form-control" id="' + selectorID + '">' +
    '<option>'+players[0][0]+'</option>' +
    '</select>'
+   
+   return selector
 }
 
 function assetList()
