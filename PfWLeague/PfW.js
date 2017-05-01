@@ -23,7 +23,7 @@ function generateLeague()
 function playerSelector( selectorID )
 {
    var players = getPlayers()
-   var selector = '<select class="form-control" id="' + selectorID + '">'
+   var selector = '<select class="form-control" id="' + selectorID + '" onChange="playerSelectorChanged(\'' + selectorID + '\')">'
    
    for( i = 0; i < players.length; i++ )
    {
@@ -34,17 +34,32 @@ function playerSelector( selectorID )
    return selector
 }
 
+function playerSelectorChanged( selectorID )
+{
+   var players = getPlayers()
+   var selectedPlayer = players[ document.getElementById( selectorID ).value ]
+   
+   playerAssetsText = "Assets controlled by " + selectedPlayer[0] + "<br />"
+   
+   for( i= 0; i < selectedPlayer.length; i++ )
+   {
+      playerAssetsText += assetCard( selectedPlayer[i][0], selectedPlayer[i][1] ) + "<br />"
+   }
+   
+   document.getElementByID( selectorID+'Text' ).innerHTML = playerAssetsText
+}
+
 function assetList()
 {
  
 }
 
-function assetCard( asset )
+function assetCard( asset, assetValue )
 {
   var assets = getAssets()
   
   var aCard = '<h4>' + assets[ asset ][0] + ' <small>flip: ' + assets[ asset ][1] + '</small></h4>' + assets[ asset ][2] +
-      '<br />Value: ' + assets[ asset ][3]
+      '<br />Value: ' + assetValue
   
   return aCard
 }
