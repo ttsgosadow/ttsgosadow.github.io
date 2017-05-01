@@ -6,6 +6,8 @@ function getPlayers()
    2: [ "Robin", [1,3] , [5,1] , [9,2] , [13,3] , ['t',1] ],
    3: [ "Sander", [2,2] , [6,3] , [10,1] , ['r',2] ]
   }
+   
+  return players
 }
 
 function generateLeague()
