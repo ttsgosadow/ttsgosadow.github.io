@@ -49,7 +49,7 @@ function playerSelectorChanged( selectorID )
       playerAssetsText += assetCard( selectedPlayer[i][0], selectedPlayer[i][1] ) + "<br />"
    }
    
-   var selectorText = selectorID+'Text'
+   var selectorText = selectorID.id + 'Text'
    alert( selectorText )
    
    document.getElementById( selectorText ).innerHTML = playerAssetsText
