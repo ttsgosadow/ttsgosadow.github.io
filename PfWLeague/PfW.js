@@ -23,7 +23,7 @@ function generateLeague()
 function playerSelector( selectorID )
 {
    var players = getPlayers()
-   var selector = '<select class="form-control" id="' + selectorID + '" onChange="playerSelectorChanged(\'' + selectorID + '\')">'
+   var selector = '<select class="form-control '+ selectorID +'" id="' + selectorID + '" onChange="playerSelectorChanged(\'' + selectorID + '\')">'
    selector += '<option value="">-- select player --</option>'
    
    for( i = 0; i < players.length; i++ )
@@ -39,7 +39,7 @@ function playerSelectorChanged( selectorID )
 {
    var players = getPlayers()
    var selectedPlayer = players[ document.getElementById( selectorID ).value ]
-   alert( players.toString() )
+   alert( document.getElementById( selectorID ).value )
    
    playerAssetsText = "<h2>Assets controlled by " + selectedPlayer[0] + "</h2>"
    
