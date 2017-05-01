@@ -27,7 +27,7 @@ function playerSelector( selectorID )
    
    for( i=0; 1<players.length;i++ )
    {
-      selector += '<option>'+players[i][0]+'</option>' +
+      selector += '<option>'+players[i][0]+'</option>'
    }
    selector += '</select>'
    
