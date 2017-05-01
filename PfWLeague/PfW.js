@@ -1,10 +1,20 @@
+function generateLeague()
+{
+ eventCard()
+}
+
+function assetCard()
+{
+  
+}
+
 function eventCard()
 {
   var eventID = 0
   
   var eCard = '<h3>' + events[ eventID ][ 0 ] + ' <small>' + events[ eventID ][ 2 ] + '</small></h3>' + events[ eventID ][ 3 ]
   
-  return eCard
+  document.getElementById( 'event' ).innerHTML = eCard
 }
 
 var events = {
