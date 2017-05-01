@@ -11,19 +11,26 @@ function assetCard()
 function eventCard()
 {
   var eventID = 0
+  var events = getEvents()
   
   var eCard = '<h3>' + events[ eventID ][ 0 ] + ' <small>' + events[ eventID ][ 2 ] + '</small></h3>' + events[ eventID ][ 3 ]
   
   document.getElementById( 'event' ).innerHTML = eCard
 }
 
+function getEvents()
+{
 var events = {
   event: ["Name", "Week", "Flavour", "Text", "Image"],
   dragon: ["Dragon Burning!", 1, "A Dragon swoops across Malifaux, burning everything in its path! You have to save everything there is to be saved!", "All models begin the game with the Burning +1 Condition. During the first turn of the game, each model has Swift (+1 AP for movement).<br />Each player antes 2 Assets, if possible. The attacker chooses the first two, the defender the second two.", '<img src="" />'],
   zombie: ["Zombiefaux!", 2, '"Bet you never seen a zombie robot… yet" - Unknown', "During the game, for each crew, the first model that dies will stay alive with half Wd (rounded down) remaining. This model loses all Conditions, gains the Undead characteristic and is permanently Slowed.<br />Each player selects up to three schemes, but may only score for two of these schemes.", '<img src="" />'],
   moral: ["The Moral of the Story is", 3, '"Whisky is the Devil, disguised as a good bottle" – Father Kroen', "Play the game as a Story Encounter, using the Deployment and Strategy table on p80 of the Rulebook.<br />Crews start with a maximum Cache equal to the Soulstone Cache of the Crew Leader. At the end of every game turn, each crew receives +1 Soulstone.", '<img src="" />']
 }
+return events
+}
 
+function getAssets()
+{
 var assets = {
   asset: ["Name", "Flip", "Text", "Value", "Image"],
   bj: ["Shady Alley", "Black Joker", "Your opponent may not use abilities on Assets.<br />If you lose the game, your opponent receives this Asset in addition to any other Assets he receives.", 1, '<img src="" />'],
@@ -45,4 +52,6 @@ var assets = {
   m: ["Haunted House", "Mask", "Use at the start of any duel before any player flips a card.<br />Add (mask) to your duel total.", 1, '<img src="" />'],
   r: ["Guard House", "Ram", "Use at the start of any duel before any player flips a card.<br />Add (ram) to your duel total.", 1, '<img src="" />'],
   t: ["Workshop", "Tome", "Use at the start of any duel before any player flips a card.<br />Add (tome) to your duel total.", 1, '<img src="" />'],
+}
+return assets
 }
