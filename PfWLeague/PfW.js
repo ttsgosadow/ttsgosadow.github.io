@@ -38,8 +38,10 @@ function playerSelector( selectorID )
 function playerSelectorChanged( selectorID )
 {
    var players = getPlayers()
-   var selectedPlayer = players[ document.getElementById( selectorID ).value ]
-   alert( document.getElementById( selectorID ).value )
+   var e = players[ document.getElementById( selectorID )
+   var selectedPlayer = e.options[ e.selectedIndex ].value
+   
+   alert( selectedPlayer.toString() )
    
    playerAssetsText = "<h2>Assets controlled by " + selectedPlayer[0] + "</h2>"
    
