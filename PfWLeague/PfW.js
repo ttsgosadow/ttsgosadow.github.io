@@ -61,9 +61,9 @@ function assetCard( asset, assetValue )
 {
   var assets = getAssets()
   
-  var aCard = '<table class="table"><tr><th><h4>' + assets[ asset ][0] + ' <small>flip: ' + assets[ asset ][1] + '</small></h4></th></tr>' +
-  '<tr><td>' + assets[ asset ][2] + '</td></tr>' +
-      '<tr><td>Value: ' + assetValue + '</td></tr></table>'
+  var aCard = '<div class="row"><div class="col-md-12 bg-warning"><h4>' + assets[ asset ][0] + ' <small>flip: ' + assets[ asset ][1] + '</small></h4></th></tr>' +
+  '</div></div><div class=""row><div class="col-md-12">' + assets[ asset ][2] + '</div></div>' +
+      '<div class=""row><div class="col-md-12 text-right">Value: ' + assetValue + '</div></div>'
   
   return aCard
 }
