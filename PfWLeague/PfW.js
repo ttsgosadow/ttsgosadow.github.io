@@ -38,7 +38,7 @@ function playerSelector( selectorID )
 function playerSelectorChanged( selectorID )
 {
    var players = getPlayers()
-   var e = players[ document.getElementById( selectorID )
+   var e = players[ document.getElementById( selectorID ) ]
    var selectedPlayer = e.options[ e.selectedIndex ].value
    
    alert( selectedPlayer.toString() )
