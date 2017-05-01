@@ -24,7 +24,7 @@ function playerSelector( selectorID )
 {
    var players = getPlayers()
    var selector = '<select class="form-control" id="' + selectorID + '" onChange="playerSelectorChanged(\'' + selectorID + '\')">'
-   selector += '<option value="">-- select player --</option>'
+   selector += '<option value="">-- select player ('+players.length+') --</option>'
    
    for( i = 0; i < players.length; i++ )
    {
