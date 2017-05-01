@@ -12,6 +12,7 @@ function generateLeague()
 {
   document.getElementById( 'event' ).innerHTML = eventCard( 'dragon' )
   
+  var players = getPlayers()
   assetSelectors( players )
  
   assetList()
@@ -41,7 +42,7 @@ function eventCard( eventID )
 {
   var events = getEvents()
   
-  var eCard = '<h3>' + events[ eventID ][ 1 ] + ' <small>' + events[ eventID ][ 2 ] + '</small></h3>' + events[ eventID ][ 3 ]
+  var eCard = '<h3>' + events[ eventID ][ 0 ] + ' <small>' + events[ eventID ][ 2 ] + '</small></h3>' + events[ eventID ][ 3 ]
   
   return eCard
 }
