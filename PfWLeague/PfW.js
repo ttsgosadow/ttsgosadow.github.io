@@ -22,11 +22,27 @@ function generateLeague()
 
 function generateAllAssets( pt1, pt2, pt3 )
 {
-   ePt1 = assetCard( 'bj' )
-   ePt2 = assetCard( 'rj' )
-   ePt3 = assetCard( '1' )
-   alert( pt2 )
-   document.getElementById( 'assetList1' ).innerHTML = ePt1
+   ePt1 = assetCard( '1' )
+   ePt2 = assetCard( '2' )
+   ePt3 = assetCard( '3' )
+   ePt1 += assetCard( '4' )
+   ePt2 += assetCard( '5' )
+   ePt3 += assetCard( '6' )
+   ePt1 += assetCard( '7' )
+   ePt2 += assetCard( '8' )
+   ePt3 += assetCard( '9' )
+   ePt1 += assetCard( '10' )
+   ePt2 += assetCard( '11' )
+   ePt3 += assetCard( '12' )
+   ePt1 += assetCard( '13' )
+   ePt2 += assetCard( 'c' )
+   ePt3 += assetCard( 'm' )
+   ePt1 += assetCard( 'r' )
+   ePt2 += assetCard( 't' )
+   ePt3 += assetCard( 'rj' )
+   ePt1 += assetCard( 'bj' )
+   
+   document.getElementById( pt1 ).innerHTML = ePt1
    document.getElementById( pt2 ).innerHTML = ePt2
    document.getElementById( pt3 ).innerHTML = ePt3
 }
