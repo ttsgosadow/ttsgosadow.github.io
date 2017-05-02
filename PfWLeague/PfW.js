@@ -20,6 +20,17 @@ function generateLeague()
   assetList()
 }
 
+function generateAllAssets( pt1, pt2, pt3 )
+{
+   ePt1 = assetCard( 'bj' )
+   ePt2 = assetCard( 'rj' )
+   ePt3 = assetCard( 1 )
+   
+   document.getElementByID( pt1 ).innerHTML = ePt1
+   document.getElementByID( pt2 ).innerHTML = ePt2
+   document.getElementByID( pt3 ).innerHTML = ePt3
+}
+
 function playerSelector( selectorID )
 {
    var players = getPlayers()
@@ -67,6 +78,10 @@ function assetList()
 function assetCard( asset, assetValue )
 {
   var assets = getAssets()
+  if( assetValue == undefined )
+  {
+     assetValue = 0
+  }
   
   var aCard = '<table class="table table-bordered"><tr><th class="warning"><h4>' + assets[ asset ][0] + ' <small class="text-right">(flip: ' + assets[ asset ][1] + ')</small></h4></th></tr>' +
   '<tr><td>' + assets[ asset ][2] + '</td></tr>' +
