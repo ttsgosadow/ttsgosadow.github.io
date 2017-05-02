@@ -142,7 +142,7 @@ function eventCard( eventID )
 {
   var events = getEvents()
   
-  var eCard = '<table class="table table-bordered"><tr><th class="danger"><h4>' + events[ eventID ][ 0 ] + '</h4></th></tr>' +
+  var eCard = '<h1>Current League Event</h1><table class="table table-bordered"><tr><th class="danger"><h4>' + events[ eventID ][ 0 ] + '</h4></th></tr>' +
   '<tr><td><small>' + events[ eventID ][ 2 ] + '</small><br /><br />' + events[ eventID ][ 3 ] + '</td></tr></table>'
   
   return eCard
