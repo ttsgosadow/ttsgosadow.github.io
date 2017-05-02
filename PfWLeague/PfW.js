@@ -183,7 +183,7 @@ var assets = {
   c: ["Graveyard", "Crow", "Use at the start of any duel before any player flips a card.<br />Add <img src=\"c.png\" alt=\"(crow)\" /> to your duel total.", 1, '<img src="" />'],
   m: ["Haunted House", "Mask", "Use at the start of any duel before any player flips a card.<br />Add <img src=\"m.png\" alt=\"(mask)\" /> to your duel total.", 1, '<img src="" />'],
   r: ["Guard House", "Ram", "Use at the start of any duel before any player flips a card.<br />Add <img src=\"r.png\" alt=\"(ram)\" /> to your duel total.", 1, '<img src="" />'],
-  t: ["Workshop", "Tome", "Use at the start of any duel before any player flips a card.<br />Add <img src=\"t.png\" alt=\"(tome)\" /> to your duel total.", 1, '<img src="" />'],
+  t: ["Workshop", "Tome", "Use at the start of any duel before any player flips a card.<br />Add <img src=\"t.png\" alt=\"(tome)\" /> to your duel total.", 1, '<img src="" />']
 }
 return assets
 }
