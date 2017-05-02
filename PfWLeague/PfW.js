@@ -21,7 +21,7 @@ function getRanking()
       {
          playerValue += players[i][n][1]
       }
-      playerRankings.push( [ players[i][0], playerValue ] )
+      playerRankings.push( [ players[i][0], playerValue, n-1 ] )
    }
    playerRankings.sort(function(a, b) { 
     return a[1] > b[1] ? 1 : -1;
@@ -31,7 +31,7 @@ function getRanking()
    var playerRankingText = '<h3>Leaderboard</h3><ol>'
    for( i = 0; i < playerRankings.length; i++ )
    {
-    playerRankingText += '<li>' + playerRankings[i][0] + ' - ' + playerRankings[i][1] + '</li>'  
+    playerRankingText += '<li>' + playerRankings[i][0] + ' - ' + playerRankings[i][1] + ' pts (' + playerRankings[i][2] + ' Assets)</li>'  
    }
    playerRankingText += '</ol>'
    
