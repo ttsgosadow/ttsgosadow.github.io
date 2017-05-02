@@ -12,7 +12,7 @@ function getPlayers()
 
 function generateLeague()
 {
-  document.getElementById( 'event' ).innerHTML = eventCard( 'dragon' )
+  document.getElementById( 'event' ).innerHTML = '<h3>Current League Event</h3>' + eventCard( 'dragon' )
  
   document.getElementById( 'playerSelector1' ).innerHTML = playerSelector( 'playerSelector1' )
   document.getElementById( 'playerSelector2' ).innerHTML = playerSelector( 'playerSelector2' )
