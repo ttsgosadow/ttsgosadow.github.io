@@ -23,6 +23,9 @@ function getRanking()
       }
       playerRankings.push( [ players[i][0], playerValue ] )
    }
+   playerRankings.sort(function(a, b) { 
+    return a[1] > b[1] ? 1 : -1;
+   });
    
    alert( playerRankings.toString() )
 }
