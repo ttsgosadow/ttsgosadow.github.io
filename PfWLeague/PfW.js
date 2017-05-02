@@ -24,7 +24,7 @@ function generateAllAssets( pt1, pt2, pt3 )
 {
    ePt1 = assetCard( 'bj' )
    ePt2 = assetCard( 'rj' )
-   ePt3 = assetCard( 1 )
+   ePt3 = assetCard( '1' )
    
    document.getElementByID( pt1 ).innerHTML = ePt1
    document.getElementByID( pt2 ).innerHTML = ePt2
