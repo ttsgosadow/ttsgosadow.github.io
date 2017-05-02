@@ -17,7 +17,7 @@ function getRanking()
  for( i = 0; i < players.length; i++ )
    {
       var playerValue = 0
-      for( n= 1; n < selectedPlayer.length; n++ )
+      for( n= 1; n < players[i].length; n++ )
       {
          playerValue += players[i][n][1]
       }
