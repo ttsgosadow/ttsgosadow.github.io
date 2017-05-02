@@ -26,9 +26,9 @@ function generateAllAssets( pt1, pt2, pt3 )
    ePt2 = assetCard( 'rj' )
    ePt3 = assetCard( '1' )
    alert( pt2 )
-   document.getElementByID( 'assetList1' ).innerHTML = ePt1
-   document.getElementByID( pt2 ).innerHTML = ePt2
-   document.getElementByID( pt3 ).innerHTML = ePt3
+   document.getElementById( 'assetList1' ).innerHTML = ePt1
+   document.getElementById( pt2 ).innerHTML = ePt2
+   document.getElementById( pt3 ).innerHTML = ePt3
 }
 
 function playerSelector( selectorID )
