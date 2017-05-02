@@ -50,7 +50,7 @@ function generateLeague()
   assetList()
 }
 
-function generateAllAssets( pt1, pt2, pt3 )
+function generateAllAssets( pt1, pt2, pt3, eventPt )
 {
    ePt1 = assetCard( '1' )
    ePt1 += assetCard( '2' )
@@ -74,9 +74,12 @@ function generateAllAssets( pt1, pt2, pt3 )
    ePt3 += assetCard( 'rj' )
    ePt3 += assetCard( 'bj' )
    
+   ePt4 = ""
+   
    document.getElementById( pt1 ).innerHTML = ePt1
    document.getElementById( pt2 ).innerHTML = ePt2
    document.getElementById( pt3 ).innerHTML = ePt3
+   document.getElementById( eventPt ).innerHTML = ePt4
 }
 
 function playerSelector( selectorID )
