@@ -160,6 +160,8 @@ var events = {
   imbalance: ["An Evil Imbalance", 6, "\"Nothing is fair in love and war\" - Unknown", "If you have fewer cards in your hand than your opponent, you gain +flip on all opposing Duels.<br />After killing an enemy model draw a card.", '<img src="" />'],
   spy: ["Spy in Our Midst", 7, "Lets just hope he's not spying for your enemy as well!", "Whenever a model performs an Attack Action targetting a model of lower station count the model of lower station as having Terrifying (All) 10. If this causes a model to have double Terrifying the model may choose which Terrifying to use.<br />Whenever a model succesfully drops a friendly scheme marker, place an enemy base marker exactly on top of it.", '<img src="" />'],   lands: ["Ever Changing Lands", 8, "Mapping the area has proved useless, as the city as well as the lands seem to be ever changing.", "The Strategy may also be scored on the first turn of the game. This may cause you to score up to 5 points for the Strategy, with a maximum of 11 Victory Points for the game.<br />Treat all Severe terrain as Hazardous terrain as well.", '<img src="" />']
 }
+return events
+}
 
 function getAssets()
 {
