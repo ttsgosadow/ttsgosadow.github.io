@@ -30,6 +30,8 @@ function getRanking()
 function generateLeague()
 {
   document.getElementById( 'event' ).innerHTML = eventCard( 'dragon' )
+   
+  getRanking()
  
   document.getElementById( 'playerSelector1' ).innerHTML = playerSelector( 'playerSelector1' )
   document.getElementById( 'playerSelector2' ).innerHTML = playerSelector( 'playerSelector2' )
