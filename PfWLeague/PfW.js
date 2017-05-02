@@ -28,14 +28,14 @@ function getRanking()
    });
    playerRankings.reverse()
    
-   var playerRankingsText = '<h3>Leaderboard</h3><ol>'
+   var playerRankingText = '<h3>Leaderboard</h3><ol>'
    for( i = 0; i < playerRankings.length; i++ )
    {
-    playerRankingsText += '<li>' + playerRankings[i][0] + ' - ' + playerRankings[i][1] + '</li>'  
+    playerRankingText += '<li>' + playerRankings[i][0] + ' - ' + playerRankings[i][1] + '</li>'  
    }
-   playerRankingsText += '</ol>'
+   playerRankingText += '</ol>'
    
-   document.getElementById( 'ranking' ).innerHTML = playerRankingsText
+   document.getElementById( 'ranking' ).innerHTML = playerRankingText
 }
 
 function generateLeague()
