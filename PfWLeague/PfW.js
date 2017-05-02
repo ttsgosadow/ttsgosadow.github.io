@@ -25,8 +25,8 @@ function generateAllAssets( pt1, pt2, pt3 )
    ePt1 = assetCard( 'bj' )
    ePt2 = assetCard( 'rj' )
    ePt3 = assetCard( '1' )
-   
-   document.getElementByID( pt1 ).innerHTML = ePt1
+   alert( pt2 )
+   document.getElementByID( 'assetList1' ).innerHTML = ePt1
    document.getElementByID( pt2 ).innerHTML = ePt2
    document.getElementByID( pt3 ).innerHTML = ePt3
 }
