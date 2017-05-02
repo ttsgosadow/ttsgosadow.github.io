@@ -10,6 +10,23 @@ function getPlayers()
   return players
 }
 
+function getRanking()
+{
+ var players = getPlayers()
+ var playerRankings = new Array()
+ for( i = 0; i < players.length; i++ )
+   {
+      var playerValue = 0
+      for( n= 1; n < selectedPlayer.length; n++ )
+      {
+         playerValue += players[i][n][1]
+      }
+      playerRankings.push( [ players[i][0], playerValue ] )
+   }
+   
+   alert( playerRankings.toString() )
+}
+
 function generateLeague()
 {
   document.getElementById( 'event' ).innerHTML = eventCard( 'dragon' )
