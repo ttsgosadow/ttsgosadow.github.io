@@ -26,8 +26,16 @@ function getRanking()
    playerRankings.sort(function(a, b) { 
     return a[1] > b[1] ? 1 : -1;
    });
+   playerRankings.reverse()
    
-   alert( playerRankings.toString() )
+   var playerRankingsText = '<h3>Leaderboard</h3><ol>'
+   for( i = 0; i < playerRankings.length; i++ )
+   {
+    playerRankingsText += '<li>' + playerRankings[i][0] + ' - ' + playerRankings[i][1] + '</li>'  
+   }
+   playerRankingsText += '</ol>'
+   
+   document.getElementById( 'ranking' ).innerHTML = playerRankingsText
 }
 
 function generateLeague()
