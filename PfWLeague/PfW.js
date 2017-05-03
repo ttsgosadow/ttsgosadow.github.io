@@ -12,6 +12,7 @@ function getPlayers()
 
 function getRanking()
 {
+   var lastUpdated = "3rd of May, 2017"
  var players = getPlayers()
  var playerRankings = new Array()
  for( i = 0; i < players.length; i++ )
@@ -28,7 +29,7 @@ function getRanking()
    });
    playerRankings.reverse()
    
-   var playerRankingText = '<h3>Leaderboard</h3><ol>'
+   var playerRankingText = '<h3>Leaderboard</h3><br /><small>last updated: '+lastUpdated+'</small><ol>'
    for( i = 0; i < playerRankings.length; i++ )
    {
     playerRankingText += '<li>' + playerRankings[i][0] + ' - ' + playerRankings[i][1] + ' pts (' + playerRankings[i][2] + ' Assets)</li>'  
