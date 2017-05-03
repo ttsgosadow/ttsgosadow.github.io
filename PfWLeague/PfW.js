@@ -148,7 +148,7 @@ function eventCard( eventID, noHeader )
   var events = getEvents()
   if( noHeader == undefined )
   {
-     assetValue = false
+     noHeader = false
   }
   
   var headerText = ''
