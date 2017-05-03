@@ -47,8 +47,6 @@ function generateLeague()
  
   document.getElementById( 'playerSelector1' ).innerHTML = playerSelector( 'playerSelector1' )
   document.getElementById( 'playerSelector2' ).innerHTML = playerSelector( 'playerSelector2' )
- 
-  assetList()
 }
 
 function generateAllAssets( pt1, pt2, pt3, eventPt )
