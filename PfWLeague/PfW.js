@@ -74,7 +74,14 @@ function generateAllAssets( pt1, pt2, pt3, eventPt )
    ePt3 += assetCard( 'rj' )
    ePt3 += assetCard( 'bj' )
    
-   ePt4 = ""
+   ePt4 = getEvent( 'event', true )
+   ePt4 += getEvent( 'dragon', true )
+   ePt4 += getEvent( 'zombie', true )
+   ePt4 += getEvent( 'moral', true )
+   ePt4 += getEvent( 'magick', true )
+   ePt4 += getEvent( 'feast', true )
+   ePt4 += getEvent( 'imbalance', true )
+   ePt4 += getEvent( 'spy', true )
    
    document.getElementById( pt1 ).innerHTML = ePt1
    document.getElementById( pt2 ).innerHTML = ePt2
@@ -121,11 +128,6 @@ function playerSelectorChanged( selectorID )
    document.getElementById( selectorText ).innerHTML = playerAssetsText
 }
 
-function assetList()
-{
- 
-}
-
 function assetCard( asset, assetValue )
 {
   var assets = getAssets()
@@ -141,11 +143,21 @@ function assetCard( asset, assetValue )
   return aCard
 }
 
-function eventCard( eventID )
+function eventCard( eventID, noHeader )
 {
   var events = getEvents()
+  if( noHeader == undefined )
+  {
+     assetValue = false
+  }
   
-  var eCard = '<h1>Current League Event</h1><table class="table table-bordered"><tr><th class="danger"><h4>' + events[ eventID ][ 0 ] + '</h4></th></tr>' +
+  var headerText = ''
+  if( !noHeader )
+  {
+   headerText = '<h1>Current League Event</h1>'  
+  }
+  
+  var eCard = headerText+'<table class="table table-bordered"><tr><th class="danger"><h4>' + events[ eventID ][ 0 ] + '</h4></th></tr>' +
   '<tr><td><small>' + events[ eventID ][ 2 ] + '</small><br /><br />' + events[ eventID ][ 3 ] + '</td></tr></table>'
   
   return eCard
