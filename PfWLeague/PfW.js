@@ -83,6 +83,8 @@ function generateAllAssets( pt1, pt2, pt3, eventPt )
    ePt4 += eventCard( 'imbalance', true )
    ePt4 += eventCard( 'spy', true )
    
+   alert( ePt4 )
+   
    document.getElementById( pt1 ).innerHTML = ePt1
    document.getElementById( pt2 ).innerHTML = ePt2
    document.getElementById( pt3 ).innerHTML = ePt3
