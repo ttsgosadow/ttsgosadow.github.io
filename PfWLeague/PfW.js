@@ -74,14 +74,14 @@ function generateAllAssets( pt1, pt2, pt3, eventPt )
    ePt3 += assetCard( 'rj' )
    ePt3 += assetCard( 'bj' )
    
-   ePt4 = getEvent( 'event', true )
-   ePt4 += getEvent( 'dragon', true )
-   ePt4 += getEvent( 'zombie', true )
-   ePt4 += getEvent( 'moral', true )
-   ePt4 += getEvent( 'magick', true )
-   ePt4 += getEvent( 'feast', true )
-   ePt4 += getEvent( 'imbalance', true )
-   ePt4 += getEvent( 'spy', true )
+   ePt4 = eventCard( 'event', true )
+   ePt4 += eventCard( 'dragon', true )
+   ePt4 += eventCard( 'zombie', true )
+   ePt4 += eventCard( 'moral', true )
+   ePt4 += eventCard( 'magick', true )
+   ePt4 += eventCard( 'feast', true )
+   ePt4 += eventCard( 'imbalance', true )
+   ePt4 += eventCard( 'spy', true )
    
    document.getElementById( pt1 ).innerHTML = ePt1
    document.getElementById( pt2 ).innerHTML = ePt2
