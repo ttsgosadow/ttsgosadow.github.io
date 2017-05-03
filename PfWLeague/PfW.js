@@ -120,9 +120,8 @@ function playerSelectorChanged( selectorID )
       {
          playerAssetsText += assetCard( selectedPlayer[i][0], selectedPlayer[i][1] ) + "<br />"
       }
-
-      var selectorText = selectorID.id + 'Text'
-    }
+   }
+   var selectorText = selectorID.id + 'Text'
    
    document.getElementById( selectorText ).innerHTML = playerAssetsText
 }
