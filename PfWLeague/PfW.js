@@ -107,9 +107,9 @@ function playerSelector( selectorID )
 
 function playerSelectorChanged( selectorID )
 {
-   if( selectorID.value == "" )
+   if( selectorID.value == "selectPlayer" )
    {
-      playerAssetsText = ""
+      playerAssetsText = "Select a player above to view his Assets."
    }
    else
    {
