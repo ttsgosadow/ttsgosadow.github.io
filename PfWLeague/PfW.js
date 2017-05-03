@@ -29,7 +29,7 @@ function getRanking()
    });
    playerRankings.reverse()
    
-   var playerRankingText = '<h3>Leaderboard<small>last updated: '+lastUpdated+'</small></h3><ol>'
+   var playerRankingText = '<h3>Leaderboard<br /><small>last updated: '+lastUpdated+'</small></h3><ol>'
    for( i = 0; i < playerRankings.length; i++ )
    {
     playerRankingText += '<li>' + playerRankings[i][0] + ' - ' + playerRankings[i][1] + ' pts (' + playerRankings[i][2] + ' Assets)</li>'  
