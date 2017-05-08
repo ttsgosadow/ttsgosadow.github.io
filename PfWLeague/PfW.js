@@ -40,7 +40,8 @@ function getRanking()
 }
 
 // CHANGE THE INITIAL SEED HERE
-Math.seed = Date.getDate() * Date.getDay()
+var d = new Date()
+Math.seed = d.getDate() * d.getDay()
 
 Math.seededRandom = function(max, min) 
 {
