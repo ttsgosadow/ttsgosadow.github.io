@@ -39,9 +39,26 @@ function getRanking()
    document.getElementById( 'ranking' ).innerHTML = playerRankingText
 }
 
+// CHANGE THE INITIAL SEED HERE
+Math.seed = Date.getDate() * Date.getDay()
+
+Math.seededRandom = function(max, min) 
+{
+    max = max || 1
+    min = min || 0
+
+    Math.seed = (Math.seed * 9301 + 49297) % 233280
+    var rnd = Math.seed / 233280.0
+
+    return min + rnd * (max - min)
+}
+
 function generateLeague()
 {
-  document.getElementById( 'event' ).innerHTML = eventCard( 'dragon' )
+  var events = getEvents()
+  var keys = Object.keys( events )
+  var choosenEvent = keys[ keys.length * Math.seededRandom() << 0 ]
+  document.getElementById( 'event' ).innerHTML = eventCard( choosenEvent )
    
   getRanking()
  
