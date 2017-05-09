@@ -51,7 +51,6 @@ Date.prototype.getWeekNumber = function()
 // CHANGE THE INITIAL SEED HERE
 var d = new Date()
 Math.seed = d.getWeekNumber()
-alert( Math.seed )
 
 Math.seededRandom = function(max, min) 
 {
