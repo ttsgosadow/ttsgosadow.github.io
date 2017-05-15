@@ -4,7 +4,7 @@ function getPlayers()
    [ "Robin - Arcanists", ['t',1] , [1,1] , [2,1] ],
    [ "Gjalt - Neverborn", ['m',1] , [1,1] , [11,1] ],
    [ "Tim - Resurrectionists", ['c',1] , ['t',1], [13,1] ],
-   [ "Patrick - Ten Thunders", ['c',1], [7,1], [9,1] ].
+   [ "Patrick - Ten Thunders", ['c',1], [7,1], [9,1] ],
    [ "Kasper - Ten THunders", ['c', 1], ['m', 1], [13,1] ]
   ]
    
