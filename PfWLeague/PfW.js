@@ -191,7 +191,6 @@ function eventCard( eventID, noHeader )
 function getEvents()
 {
 var events = {
-  event: ["Name", "Week", "Flavour", "Text", "Image"],
   dragon: ["Dragon Burning!", 1, "A Dragon swoops across Malifaux, burning everything in its path! You have to save everything there is to be saved!", "All models begin the game with the Burning +1 Condition. During the first turn of the game, each model has Nimble (+1 AP for movement).<br /><br />Each player chooses 2 Assets of his opponent. Winning or drawing the game you gain control of both those Assets.", '<img src="" />'],
   zombie: ["Zombiefaux!", 2, '"Bet you never seen a zombie robot… yet" - Unknown', "During the game, for each crew, the first Living non-Peon model that is killed will stay alive with half Wd (rounded down) remaining. This model loses all Conditions and the Living characteristic, gains the Undead characteristic and is permanently Slowed.<br /><br />At the end of the game, before scoring, each player may switch one choosen scheme for another scheme in the pool.", '<img src="" />'],
   moral: ["The Moral of the Story is", 3, '"Whisky is the Devil, disguised as a good bottle" – Father Kroen', "Play the game as a 45ss Encounter. All upgrades are free.<br /><br />Any scheme marker that does not have a friendly model within 4\" is immediately discarded.", '<img src="" />'],
@@ -207,7 +206,6 @@ return events
 function getAssets()
 {
 var assets = {
-  asset: ["Name", "Flip", "Text", "Value", "Image"],
   bj: ["Shady Alley", "Black Joker", "Use to prevent the use of one of your opponents Assets. That Asset cannot be used again during this game.<br />If you lose the game, your opponent receives this Asset in addition to any other Assets he receives.", 1, '<img src="" />'],
   rj: ["Burglars Bar", "Red Joker", "Use at the start of the game, before selecting Crews.<br />You and your opponent flip a card. If you flip higher then your opponent, you steal one Soulstone from him.", 1, '<img src="" />'],
   1: ["Bridge", "1", "Use when hiring your crew; you may hire one additional model with the Mercenary characteristic. For up to one model with the Mercenary characteristic, you don’t have to pay the extra Soulstone for hiring that Mercenary.", 1, '<img src="" />'],
