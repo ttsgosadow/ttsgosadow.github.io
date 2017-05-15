@@ -1,7 +1,7 @@
 function getPlayers()
 {
    var players = [
-   [ "Arne - Neverborn", ['c',1] , [2,1] , [13,1] ],
+   [ "Arne - Ten Thunders", ['c',1] , [2,1] , [13,1] ],
    [ "Gjalt - Neverborn", ['m',1] , [1,1] , [11,1] ],
    [ "Jeroen - Neverborn", ['c',1] , ['r',1] , ['rj',1] ],
    [ "Jim - Guild", ['r',1] , ['r',1] , ['m',1] ],
