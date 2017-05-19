@@ -211,7 +211,7 @@ return events
 function getAssets()
 {
 var assets = {
-  placeholder: ["Placeholder", "na", "This is a placeholder Asset; a new Asset has been flipped, but waiting for the player to choose which Asset to generate from it.", 1, '<img src=""></img>']
+  placeholder: ["Placeholder", "na", "This is a placeholder Asset; a new Asset has been flipped, but waiting for the player to choose which Asset to generate from it.", 1, '<img src=""></img>'],
   bj: ["Shady Alley", "Black Joker", "Use to prevent the use of one of your opponents Assets. That Asset cannot be used again during this game.<br />If you lose the game, your opponent receives this Asset in addition to any other Assets he receives.", 1, '<img src="" />'],
   rj: ["Burglars Bar", "Red Joker", "Use at the start of the game, before selecting Crews.<br />You and your opponent flip a card. If you flip higher then your opponent, you steal one Soulstone from him.", 1, '<img src="" />'],
   1: ["Bridge", "1", "Use when hiring your crew; you may hire one additional model with the Mercenary characteristic. For up to one model with the Mercenary characteristic, you don’t have to pay the extra Soulstone for hiring that Mercenary.", 1, '<img src="" />'],
