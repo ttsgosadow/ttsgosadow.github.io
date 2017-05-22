@@ -57,22 +57,12 @@ Date.prototype.getWeekNumber = function()
 var d = new Date()
 Math.seed = d.getWeekNumber()
 
-Math.seededRandom = function(max, min) 
-{
-    max = max || 1
-    min = min || 0
-
-    Math.seed = (Math.seed * 9301 + 49297) % 233280
-    var rnd = Math.seed / 233280.0
-
-    return min + rnd * (max - min)
-}
-
 function generateLeague()
 {
   var events = getEvents()
   var keys = Object.keys( events )
-  var choosenEvent = keys[ Math.floor( keys.length * Math.seededRandom() ) ]
+  var r = Math.floor( Math.seed / keys.length )
+  var choosenEvent = keys[ Math.seed - ( r * keys.length ) ]
   document.getElementById( 'event' ).innerHTML = eventCard( choosenEvent )
    
   getRanking()
