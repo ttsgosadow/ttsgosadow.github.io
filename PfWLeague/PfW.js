@@ -72,6 +72,7 @@ function generateLeague()
 {
   var events = getEvents()
   var keys = Object.keys( events )
+  alert( keys.toString() )
   var choosenEvent = keys[ Math.floor( keys.length * Math.seededRandom ) ]
   document.getElementById( 'event' ).innerHTML = eventCard( choosenEvent )
    
