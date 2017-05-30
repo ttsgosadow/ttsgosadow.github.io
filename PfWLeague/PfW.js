@@ -7,7 +7,7 @@ function getPlayers()
    [ "Jim - Guild", ['r',3] , ['m',1] , ['placeholder',1] ],
    [ "Kasper - Ten Thunders", ['c', 1] , [13,3], [11,1] ],
    [ "Patrick - Ten Thunders", ['c',3] , [7,1] , [9,1] ],
-   [ "Robin - Arcanists" , [1,3] , [2,1], ['placeholder',1] ],
+   [ "Robin - Arcanists" , [1,3] , [2,1], [3,1] ],
    [ "Sander - Outcasts", ['c',1] , ['r',1] , ['t',1] ],
    [ "Tim - Resurrectionists", ['c',3] , ['c',1] , [13,1] ]
   ]
@@ -17,7 +17,7 @@ function getPlayers()
 
 function getRanking()
 {
-   var lastUpdated = "22nd of May, 2017"
+   var lastUpdated = "30th of May, 2017"
  var players = getPlayers()
  var playerRankings = new Array()
  for( i = 0; i < players.length; i++ )
