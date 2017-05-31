@@ -186,7 +186,7 @@ function eventCard( eventID, noHeader )
 function getEvents()
 {
 var events = {
-    moral: ["The Moral of the Story is", 3, '"Whisky is the Devil, disguised as a good bottle" – Father Kroen', "Play the game as a 45ss Encounter. All upgrades are free.<br /><br />Any scheme marker that does not have a friendly model within 4\" is immediately discarded.", '<img src="" />'],
+    moral: ["The Moral of the Story is", 3, '"Whisky is the Devil, disguised as a good bottle" – Father Kroen', "Play the game as a 45ss Encounter. All upgrades are free.<br /><br />You may select any totem with your master, regardless of faction or other restrictions. A base or model can be used to proxy this model.", '<img src="" />'],
   magick: ["Rush of Magick", 4, "Since the orphanage has burned down the Magick has been so strong on the wind, that you can taste it. The taste of death...", "During this game both players have a base maximum hand size of 8.<br /><br />Avatars are legal for this game, and can be proxied with any model on a 50mm base.", '<img src="" />'],
   feast: ["Feast or Famine?", 5, "An all consuming hunger grasps us all. But how bad is that when there is so much to sate yourself with?", "Every model gains the following action during this game:<br /><b>(0) If it ain't movin'...:</b> discard a corpse marker, scrap marker or enemy scheme marker in base contact to make a 1/2/3 healing flip.<br /><br />Treat the Black Joker as the Red Joker when it's flipped from the Fate Deck.", '<img src="" />'],
   imbalance: ["An Evil Imbalance", 6, "\"Nothing is fair in love and war\" - Unknown", "If you have fewer cards in your hand than your opponent, you gain +flip on all opposing Duels.<br /><br />After killing an enemy model draw a card.", '<img src="" />'],
