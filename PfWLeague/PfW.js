@@ -17,7 +17,7 @@ function getPlayers()
 
 function getRanking()
 {
-   var lastUpdated = "30th of May, 2017"
+   var lastUpdated = "1th of June, 2017"
  var players = getPlayers()
  var playerRankings = new Array()
  for( i = 0; i < players.length; i++ )
