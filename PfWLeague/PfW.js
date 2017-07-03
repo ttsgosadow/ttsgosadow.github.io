@@ -2,7 +2,7 @@ function getPlayers()
 {
    var players = [
    [ "Arne - Ten Thunders" , ['rj',4] , ['r',1] , [2,3] , [13,1] ],
-   [ "Gjalt - Neverborn" , ['c',2] , ['m',5] , ['r',2], ['r',2], [1,3], [11,11] ],
+   [ "Gjalt - Neverborn" , ['c',2] , ['m',9] , ['r',2], ['r',2], [1,3], [11,7] ],
    [ "Jeroen - Neverborn" , ['c',2] , [9,3] , ['bj',1] ],
    [ "Jim - Guild" , ['r',3] , ['c',1] , ['m',1] , [13,2] ],
    [ "Kasper - Ten Thunders" , ['c',1], [11,3] , [13,3] ],
