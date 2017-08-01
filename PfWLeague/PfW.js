@@ -4,11 +4,11 @@ function getPlayers()
    [ "Arne - Ten Thunders" , ['rj',6] , ['r',1] , [2,3] ],
    [ "Gjalt - Neverborn" , ['c',2] , ['m',9] , ['r',2], ['r',2], [1,3], [11,7] ],
    [ "Jeroen - Neverborn" , [9,3] , ['bj',1], ['placeholder',1] ],
-   [ "Jim - Guild" , ['r',3] , ['c',1] , ['m',1] , [13,2] ],
+   [ "Jim - Guild" , ['r',5] , ['c',4] , ['m',1] , [13,2] ],
    [ "Kasper - Ten Thunders" , ['c',1], [11,3] , [13,3] ],
    [ "Patrick - Ten Thunders" , ['c',5] , ['c',4] , ['r',2] , [3,1] , [9,5] ],
    [ "Robin - Arcanists" , ['t',6] , [1,5] , [3,3] , [9,2] , [13,3] ],
-   [ "Sander - Outcasts" , ['c',5] , ['c',1] , ['r',1] ],
+   [ "Sander - Outcasts" , ['c',3] , ['c',1] , ['r',1] ],
    [ "Tim - Resurrectionists" , ['c',3] , ['c',1] , ['c',1] , [2,7] , [7,2] , [13,1] ]
   ]
    
