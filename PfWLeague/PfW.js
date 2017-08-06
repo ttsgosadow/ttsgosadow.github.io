@@ -4,8 +4,8 @@ function getPlayers()
    [ "Arne - Ten Thunders" , ['rj',6] , ['r',1] , [2,3] ],
    [ "Gjalt - Neverborn" , ['c',2] , ['m',9] , ['r',2], ['r',2], [1,3], [11,7] ],
    [ "Jeroen - Neverborn" , ['m',1] , [9,3] , ['bj',1] ],
-   [ "Jim - Guild" , ['r',5] , ['c',4] , [13,4] ],
-   [ "Kasper - Ten Thunders" , [13,5] , ['placeholder',1] , ['placeholder',1] ],
+   [ "Jim - Guild" , [13,6], ['placeholder',1] , ['placeholder',1] ],
+   [ "Kasper - Ten Thunders" , ['r',3] , ['r',1] , ['c',2] , [6,1] , [13,7] ],
    [ "Patrick - Ten Thunders" , ['c',5] , ['c',4] , ['r',2] , [3,1] , [9,5] ],
    [ "Robin - Arcanists" , ['t',6] , [1,5] , [3,3] , [9,2] , [13,3] ],
    [ "Sander - Outcasts" , ['c',3] , ['c',3] , ['c',1], ['r',1] , [11,2] ],
@@ -17,7 +17,7 @@ function getPlayers()
 
 function getRanking()
 {
-   var lastUpdated = "August 5, 2017"
+   var lastUpdated = "August 6, 2017"
  var players = getPlayers()
  var playerRankings = new Array()
  for( i = 0; i < players.length; i++ )
