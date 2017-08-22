@@ -33,7 +33,7 @@ function getURLParameter()
 {
   var URIcomp = decodeURIComponent((new RegExp('[?|&]' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || false;
   if( URIcomp )
-    return URIcomp.match( /(\d+[cmrt]|bj|rj|GG16|GG17|B1)/g )
+    return URIcomp.match( /(\d+[cmrt]|bj|rj|GG16|GG17|GG18|B1)/g )
   else
     return Array(0)
 }
@@ -118,7 +118,7 @@ function generateGame( targetField )
   else
     failedGame = true
     
-  if( gameType == 'GG16' || gameType == 'GG17' || gameType == 'B1' )
+  if( gameType == 'GG16' || gameType == 'GG17' || gameType == 'GG18' || gameType == 'B1' )
   {
     var deployment = getDeployment(deploymentCard["value"], gameType)
     var strategy = getStrategy(strategyCard["suit"], strategyCard["value"], gameType)
