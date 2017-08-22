@@ -290,7 +290,7 @@ function getStrategy( suit, value, gameType )
     }
   }
     
-    if( gameType == 'GG17' )
+    if( gameType == 'GG18' )
   {
     var strategy = {
       bj: ["Put Out a Hit", "<em>Set Up</em><br />While deploying models, each player places one 30mm, impassable Strategy Marker on their side of the table, not in their deployment zone.<br /><br /><em>Special</em><br />At the start of the Turn, each player may discard a card and name an enemy model with a Soulstone cost greater than the value of the discard card.<br />The named enemy model gains the following Condition until the end of the game:<br /> Contract On My Life: If this model is killed by an enemy model, the enemy model gains the following Condition until the end of the game: \"Collect Payment +1: If this model is within 1\" of any Strategy Marker during the Upkeep Step, gain a number of VP equal to the value of this Condition, then end this Condition.\" If this model is killed or sacrificed by a friendly model, the enemy Crew gains 1 VP."],
