@@ -242,6 +242,12 @@ function getDeployment( value, gameType ) {
 
 function getStrategy( suit, value, gameType ) 
 {
+    if( gameType == 'GG18' )
+    {
+       if( suit == 'bj' || ( isEven( value ) && suit != 'rj' ) )
+        gameType = 'B1'
+    }
+    
     if( gameType == 'GG17' )
     {
        if( suit == 'bj' || ( isEven( value ) && suit != 'rj' ) )
@@ -281,6 +287,18 @@ function getStrategy( suit, value, gameType )
       m: ["Interference", "<em>Set Up</em><br />Divide the table into four 18\" by 18\" table Quarters.<br /><br /><em>Victory Points</em><br />At the end of each Turn after the first, a Crew earns 1 VP if it controls two or more table Quarters. To control a table Quarter, the Crew must have the most unengaged non-Peon models within the table Quarter. These models cannot be within 6\" of the Center of the table, or partially within another table Quarter."],
       r: ["Extraction", "<em>Set up</em><br />Place an Informant Marker at the Center of the table.<br /><br /><em>Special Rules</em><br />At the end of every Turn after the first, after scoring VP, the player with the most non-Peon models within 6\" of the Informant Marker may place the Marker up to 3\" from its current location, not into terrain or base contact with a model.<br /><br /><em>Victory Points</em><br />At the end of each Turn after the first, a Crew earns 1 VP if it has two or more non-Peon models within 6\" of the Informant Marker."],
       t: ["Headhunter", "<em>Special Rules</em><br />Whenever a model kills or sacrifices a non-Peon model which it considers an enemy, the model which made the kill must place a 30mm Head Marker within 3\" and LoS of the killed or sacrificed model before removing it from play. This Marker may not be placed in base contact with any model; if there is nowhere it can legally be placed, then skip placing a Marker. Any model in base contact with a Head Marker may make a (1) Interact Action with it to remove it from play.<br /><br /><em>Victory Points</em><br />At the end of every Turn after the first, a Crew earns 1 VP if it removed at least one Head Marker from play that turn."]
+    }
+  }
+    
+    if( gameType == 'GG17' )
+  {
+    var strategy = {
+      bj: ["Put Out a Hit", "<em>Set Up</em><br />While deploying models, each player places one 30mm, impassable Strategy Marker on their side of the table, not in their deployment zone.<br /><br /><em>Special</em><br />At the start of the Turn, each player may discard a card and name an enemy model with a Soulstone cost greater than the value of the discard card.<br />The named enemy model gains the following Condition until the end of the game:<br /> Contract On My Life: If this model is killed by an enemy model, the enemy model gains the following Condition until the end of the game: \"Collect Payment +1: If this model is within 1\" of any Strategy Marker during the Upkeep Step, gain a number of VP equal to the value of this Condition, then end this Condition.\" If this model is killed or sacrificed by a friendly model, the enemy Crew gains 1 VP."],
+      rj: ["Put Out a Hit", "<em>Set Up</em><br />While deploying models, each player places one 30mm, impassable Strategy Marker on their side of the table, not in their deployment zone.<br /><br /><em>Special</em><br />At the start of the Turn, each player may discard a card and name an enemy model with a Soulstone cost greater than the value of the discard card.<br />The named enemy model gains the following Condition until the end of the game:<br /> Contract On My Life: If this model is killed by an enemy model, the enemy model gains the following Condition until the end of the game: \"Collect Payment +1: If this model is within 1\" of any Strategy Marker during the Upkeep Step, gain a number of VP equal to the value of this Condition, then end this Condition.\" If this model is killed or sacrificed by a friendly model, the enemy Crew gains 1 VP."],
+      c: ["Public Executions", "<em>Special Rules</em><br />Whenever a friendly model kills or sacrifices a non-Peon model which it considers an enemy, place a friendly 30mm Strategy Marker in base contact with the enemy model before it is removed from play (after all other effects are completed).<br /> Any model within 1\" of a Strategy Marker (friendly or enemy) may take a (1) Interact Action targeting the Marker to remove it from play.<br /><br /><em>Victory Points</em><br />At the end of every Turn after the first, a Crew gains 1 VP if it has more friendly Strategy Markers in play than the enemy Crew.<br />A Crew that scores this Strategy removes a Strategy Marker from play."],
+      m: ["Ours", "<em>Set Up</em><br />Divide the table into four 18\" by 18\" table Quarters.<br /><br /><em>Victory Points</em><br />During the Upkeep Step of each Turn after the first, add up the Soulstone cost of all friendly non-Peon models in each table quarter. The Crew with the highest Soulstone cost within the table quarter controls it (models without a Soulstone cost count as 10). These models cannot be within 6\" of the Center of the table or partially within another table quarter."],
+      r: ["Symbols of Authority", "<em>Set up</em><br />While deploying models, each player places two 30mm, impassable Strategy Markers: one on their side of the table not in their deployment zone, and one on the opponent's side of the table at least 10\" from another Marker.<br /><br /><em>Special Rules</em><br />On every Turn after the first, non-Peon models gain the following (1) Interact Action:<br />(1) Interact: Target a Strategy Marker within 1\". This model makes a TN 14 Wp duel. On a success, remove the targeted Strategy Marker from play and gain 1 VP.<br /><br /><em>Victory Points</em><br />At the end of the game, a Crew gains 1 VP for each Strategy Marker on their side of the table."],
+      t: ["Ply for Information", "<em>Special Rules</em><br />All non-Peon models engaged with an enemy model may take a (1) Interact Action to gain the following Condition until the end of the game:<br />\"Enemy Secrets: This model may not take Interact Actions. This Condition is removed during the Upkeep Step if the model is inside its deployment zone (even partially).\"<br /><br /><em>Victory Points</em><br />At the end of the game, each player gains VP equal to the number of Enemy Secrets Conditions on friendly models."]
     }
   }
 
