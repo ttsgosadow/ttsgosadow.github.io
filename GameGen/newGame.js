@@ -15,13 +15,35 @@ function newGame( gameType )
   var strategyCard = topCard(deck)
   deck = newDeck()
   shuffle(deck)
-  var schemeCard1 = topCard(deck)
-  while (schemeCard1["card"] == "bj" || schemeCard1["card"] == "rj")
-      schemeCard1 = topCard(deck)
-  var schemeCard2 = topCard(deck)
-  while (schemeCard2["card"] == "bj" || schemeCard2["card"] == "rj")
-      schemeCard2 = topCard(deck)
-  window.location.href = "?" + gameType + deploymentCard["card"] + strategyCard["card"] + schemeCard1["card"] + schemeCard2["card"]
+  
+  if( gameType == 'B1' || gameType == 'GG17' )
+  {
+    var schemeCard1 = topCard(deck)
+    while (schemeCard1["card"] == "bj" || schemeCard1["card"] == "rj")
+        schemeCard1 = topCard(deck)
+    var schemeCard2 = topCard(deck)
+    while (schemeCard2["card"] == "bj" || schemeCard2["card"] == "rj")
+        schemeCard2 = topCard(deck)
+    var goToURL = "?" + gameType + deploymentCard["card"] + strategyCard["card"] + schemeCard1["card"] + schemeCard2["card"]
+  }
+  else if( gameType == 'GG18' )
+  {
+    var schemeCards = []
+    while ( schemeCards.length < 4)
+    {
+      var schemeCard = topCard(deck)
+      if( schemeCard1["card"] != "bj" && schemeCard1["card"] != "rj" )
+        schemeCards [schemeCard["value"]] = schemeCard
+    }
+    
+    schemeCard1 = schemeCards.shift()
+    schemeCard2 = schemeCards.shift()
+    var schemeCard3 = schemeCards.shift()
+    var schemeCard4 = schemeCards.shift()
+      
+    goToURL = "?" + gameType + deploymentCard["card"] + strategyCard["card"] + schemeCard1["card"] + schemeCard2["card"] + schemeCard3["card"] + schemeCard4["card"]
+    }
+    window.location.href = goToURL
 }
 
 function newDeck() 
