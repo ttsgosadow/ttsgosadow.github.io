@@ -36,6 +36,8 @@ function newGame( gameType )
         schemeCards[schemeCard["value"]] = schemeCard
     }
     
+    alert( schemeCards.toString() )
+    
     var schemeCard1 = schemeCards.shift()
     var schemeCard2 = schemeCards.shift()
     var schemeCard3 = schemeCards.shift()
