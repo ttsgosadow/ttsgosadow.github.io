@@ -33,11 +33,11 @@ function newGame( gameType )
     {
       var schemeCard = topCard(deck)
       if( schemeCard["card"] != "bj" && schemeCard["card"] != "rj" )
-        schemeCards [schemeCard["value"]] = schemeCard
+        schemeCards[schemeCard["value"]] = schemeCard
     }
     
-    schemeCard1 = schemeCards.shift()
-    schemeCard2 = schemeCards.shift()
+    var schemeCard1 = schemeCards.shift()
+    var schemeCard2 = schemeCards.shift()
     var schemeCard3 = schemeCards.shift()
     var schemeCard4 = schemeCards.shift()
       
