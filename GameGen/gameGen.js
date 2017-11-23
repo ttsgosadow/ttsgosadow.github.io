@@ -55,6 +55,67 @@ function newGame( gameType )
   window.location.href = "?" + gameType + deploymentCard["card"] + strategyCard["card"] + schemeCard1["card"] + schemeCard2["card"]
 }
 
+function cardToChar( card )
+{
+    var cardChars = []
+    cardChars['a'] = "1c"
+    cardChars['b'] = "2c"
+    cardChars['c'] = "3c"
+    cardChars['d'] = "4c"
+    cardChars['e'] = "5c"
+    cardChars['f'] = "6c"
+    cardChars['g'] = "7c"
+    cardChars['h'] = "8c"
+    cardChars['i'] = "9c"
+    cardChars['j'] = "10c"
+    cardChars['k'] = "11c"
+    cardChars['l'] = "12c"
+    cardChars['m'] = "13c"
+    cardChars['n'] = "1m"
+    cardChars['o'] = "2m"
+    cardChars['p'] = "3m"
+    cardChars['q'] = "4m"
+    cardChars['r'] = "5m"
+    cardChars['s'] = "6m"
+    cardChars['t'] = "7m"
+    cardChars['u'] = "8m"
+    cardChars['v'] = "9m"
+    cardChars['w'] = "10m"
+    cardChars['x'] = "11m"
+    cardChars['y'] = "12m"
+    cardChars['z'] = "13m"
+    cardChars['A'] = "1r"
+    cardChars['B'] = "2r"
+    cardChars['C'] = "3r"
+    cardChars['D'] = "4r"
+    cardChars['E'] = "5r"
+    cardChars['F'] = "6r"
+    cardChars['G'] = "7r"
+    cardChars['H'] = "8r"
+    cardChars['I'] = "9r"
+    cardChars['J'] = "10r"
+    cardChars['K'] = "11r"
+    cardChars['L'] = "12r"
+    cardChars['M'] = "13r"
+    cardChars['N'] = "1t"
+    cardChars['O'] = "2t"
+    cardChars['P'] = "3t"
+    cardChars['Q'] = "4t"
+    cardChars['R'] = "5t"
+    cardChars['S'] = "6t"
+    cardChars['T'] = "7t"
+    cardChars['U'] = "8t"
+    cardChars['V'] = "9t"
+    cardChars['W'] = "10t"
+    cardChars['X'] = "11t"
+    cardChars['Y'] = "12t"
+    cardChars['Z'] = "13t"
+    cardChars['-'] = "bj"
+    cardChars['+'] = "rj"
+    
+    return cardChars[ card ]
+}
+
 function newDeck() 
 {
   return ["1c", "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "11c", "12c", "13c",
