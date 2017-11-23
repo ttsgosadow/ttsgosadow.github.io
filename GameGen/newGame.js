@@ -32,7 +32,7 @@ function newGame( gameType )
     while ( schemeCards.length < 4)
     {
       var schemeCard = topCard(deck)
-      if( schemeCard1["card"] != "bj" && schemeCard1["card"] != "rj" )
+      if( schemeCard["card"] != "bj" && schemeCard["card"] != "rj" )
         schemeCards [schemeCard["value"]] = schemeCard
     }
     
