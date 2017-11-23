@@ -36,14 +36,15 @@ function newGame( gameType )
         schemeCards.push( schemeCard )
     }
     
-    alert( schemeCards.toString() )
+    var deploymentChar = cardtoChar( deploymentCard )
+    var strategyChar = cardtoChar( strategyCard )
     
-    var schemeCard1 = schemeCards.shift()
-    var schemeCard2 = schemeCards.shift()
-    var schemeCard3 = schemeCards.shift()
-    var schemeCard4 = schemeCards.shift()
+    var schemeChar1 = cardtoChar( schemeCards.shift() )
+    var schemeChar2 = cardtoChar( schemeCards.shift() )
+    var schemeChar3 = cardtoChar( schemeCards.shift() )
+    var schemeChar4 = cardtoChar( schemeCards.shift() )
       
-    goToURL = "?" + gameType + deploymentCard["card"] + strategyCard["card"] + schemeCard1["card"] + schemeCard2["card"] + schemeCard3["card"] + schemeCard4["card"]
+    goToURL = "?" + gameType + "=" + deploymentChar + strategyChar + schemeChar1 + schemeChar2 + schemeChar3 + schemeChar4
     }
     window.location.href = goToURL
 }
@@ -97,7 +98,75 @@ function shuffle(array)
 
 function cardToChar( card )
 {
-    var cardChars = []
+    var charCard = getCharCards()
+    return charCard[ card["value"] ]
+}
+
+function getCharCards()
+{
+  var charCards = []
+    charCards['1c’] = “a“
+    charCards['2c’] = “b“
+    charCards['3c’] = “c“
+    charCards['4c’] = “d“
+    charCards['5c’] = “e“
+    charCards['6c’] = “f“
+    charCards['7c’] = “g“
+    charCards['8c’] = “h“
+    charCards['9c’] = “i“
+    charCards['10c’] = “j“
+    charCards['11c’] = “k“
+    charCards['12c’] = “l“
+    charCards['13c’] = “m“
+    charCards['1m’] = “n“
+    charCards['2m’] = “o“
+    charCards['3m’] = “p“
+    charCards['4m’] = “q“
+    charCards['5m’] = “r“
+    charCards['6m’] = “s“
+    charCards['7m’] = “t“
+    charCards['8m’] = “u“
+    charCards['9m’] = “v“
+    charCards['10m’] = “w“
+    charCards['11m’] = “x“
+    charCards['12m’] = “y“
+    charCards['13m’] = “z“
+    charCards['1r’] = “A“
+    charCards['2r’] = “B“
+    charCards['3r’] = “C“
+    charCards['4r’] = “D“
+    charCards['5r’] = “E“
+    charCards['6r’] = “F“
+    charCards['7r’] = “G“
+    charCards['8r’] = “H“
+    charCards['9r’] = “I“
+    charCards['10r’] = “J“
+    charCards['11r’] = “K“
+    charCards['12r’] = “L“
+    charCards['13r’] = “M“
+    charCards['1t’] = “N“
+    charCards['2t’] = “O“
+    charCards['3t’] = “P“
+    charCards['4t’] = “Q“
+    charCards['5t’] = “R“
+    charCards['6t’] = “S“
+    charCards['7t’] = “T“
+    charCards['8t’] = “U“
+    charCards['9t’] = “V“
+    charCards['10t’] = “W“
+    charCards['11t’] = “X“
+    charCards['12t’] = “Y“
+    charCards['13t’] = “Z“
+    charCards['bj’] = “-“
+    charCards['rj’] = “+“
+  
+    return charCards
+
+}
+
+function getCardChars()
+{
+  var cardChars = []
     cardChars['a'] = "1c"
     cardChars['b'] = "2c"
     cardChars['c'] = "3c"
@@ -152,6 +221,6 @@ function cardToChar( card )
     cardChars['Z'] = "13t"
     cardChars['-'] = "bj"
     cardChars['+'] = "rj"
-    
-    return cardChars[ card ]
+  
+    return cardChars
 }
