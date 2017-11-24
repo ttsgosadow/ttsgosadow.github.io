@@ -10,6 +10,7 @@ function getURLParameter()
 function getCardChar( card )
 {
     var charCard = getCharCards()
+    alert( card["card"] )
     return charCard[ card["card"] ]
 }
 
