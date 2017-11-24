@@ -4,13 +4,19 @@ function generateGame( targetField )
   var failedGame = false
   var gameType = 'none'
   alert( URIparam.toString() )
-  if( URIparam.length == 5 )
+  if( URIparam.length == 5 || URIparam.length == 7 )
   {
-    var gameType = URIparam[0]
-    var deploymentCard = cardFromText(URIparam[1])
-    var strategyCard = cardFromText(URIparam[2])
-    var schemeCard1 = cardFromText(URIparam[3]) 
-    var schemeCard2 = cardFromText(URIparam[4])
+    var gameType = URIparam[0].slice(0, -1)
+    var deploymentCard = cardFromText(getCharCard(URIparam[1]))
+    var strategyCard = cardFromText(getCharCard(URIparam[2]))
+    var schemeCard1 = cardFromText(getCharCard(URIparam[3]))
+    var schemeCard2 = cardFromText(getCharCard(URIparam[4]))
+    
+    if( URIparam.length == 7 )
+    {
+      var schemeCard3 = cardFromText(getCharCard(URIparam[5]))
+      var schemeCard4 = cardFromText(getCharCard(URIparam[6]))
+    }
   }
   else
     failedGame = true
