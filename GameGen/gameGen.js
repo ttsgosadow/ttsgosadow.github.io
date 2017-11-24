@@ -3,7 +3,7 @@ function generateGame( targetField )
   var URIparam = getURLParameter()
   var failedGame = false
   var gameType = 'none'
-  alert( URIparam.toString() )
+ 
   if( URIparam.length == 5 || URIparam.length == 7 )
   {
     var gameType = URIparam[0].slice(0, -1)
