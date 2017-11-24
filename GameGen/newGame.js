@@ -7,10 +7,10 @@ function getURLParameter()
     return Array(0)
 }
 
-function cTc( card )
+function getCardChar( card )
 {
     var charCard = getCharCards()
-    return charCard[ card["value"] ]
+    return charCard[ card["card"] ]
 }
 
 function newGame( gameType ) 
@@ -46,13 +46,13 @@ function newGame( gameType )
         }
       }
 
-      var deploymentChar = cTc( deploymentCard )
-      var strategyChar = cTc( strategyCard )
+      var deploymentChar = getCardChar( deploymentCard )
+      var strategyChar = getCardChar( strategyCard )
 
-      var schemeChar1 = cTc( schemeCards.shift() )
-      var schemeChar2 = cTc( schemeCards.shift() )
-      var schemeChar3 = cTc( schemeCards.shift() )
-      var schemeChar4 = cTc( schemeCards.shift() )
+      var schemeChar1 = getCardChar( schemeCards.shift() )
+      var schemeChar2 = getCardChar( schemeCards.shift() )
+      var schemeChar3 = getCardChar( schemeCards.shift() )
+      var schemeChar4 = getCardChar( schemeCards.shift() )
 
       goToURL = "?" + gameType + "=" + deploymentChar + strategyChar + schemeChar1 + schemeChar2 + schemeChar3 + schemeChar4
       }
