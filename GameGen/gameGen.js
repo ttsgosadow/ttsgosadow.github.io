@@ -97,16 +97,16 @@ function cardFromText(card)
 
 function getStrategy( suit, value, gameType ) 
 {
-    if( gameType == 'GG18' )
-    {
-       if( suit == 'bj' || suit == 'rj' || isEven( value ) )
-        gameType = 'GG17'
-    }
-    
     if( gameType == 'GG17' )
     {
        if( suit == 'bj' || ( isEven( value ) && suit != 'rj' ) )
         gameType = 'B1'
+    }
+  
+    if( gameType == 'GG18' )
+    {
+       if( suit == 'bj' || suit == 'rj' || isEven( value ) )
+        gameType = 'GG17'
     }
     
   if( gameType == 'B1' )
