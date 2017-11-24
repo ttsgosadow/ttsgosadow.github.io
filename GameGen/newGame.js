@@ -36,6 +36,8 @@ function newGame( gameType )
         schemeCards.push( schemeCard )
     }
     
+    alert( deploymentCard.toString() )
+    
     var deploymentChar = cardToChar( deploymentCard )
     var strategyChar = cardtoChar( strategyCard )
     
