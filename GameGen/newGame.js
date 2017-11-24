@@ -7,6 +7,7 @@ function getURLParameter()
     return Array(0)
 }
 
+var cardToChar = function()
 function cardToChar( card )
 {
     var charCard = getCharCards()
