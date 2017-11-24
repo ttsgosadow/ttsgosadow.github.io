@@ -7,13 +7,6 @@ function getURLParameter()
     return Array(0)
 }
 
-function getCardChar( card )
-{
-    var charCard = getCharCards()
-    alert( card["card"] )
-    return charCard[ card["card"] ]
-}
-
 function newGame( gameType ) 
 {
   var deck = newDeck()
@@ -106,6 +99,18 @@ function shuffle(array)
       array[randomIndex] = temporaryValue;
   }
   return array;
+}
+
+function getCardChar( card )
+{
+    var charCard = getCharCards()
+    return charCard[ card["card"] ]
+}
+
+function getCharCard( char )
+{
+    var cardChar = getCardChars()
+    return cardChar[ char ]
 }
 
 function getCharCards()
