@@ -26,7 +26,7 @@ function generateGame( targetField )
     var deployment = getDeployment(deploymentCard["value"], gameType)
     var strategy = getStrategy(strategyCard["suit"], strategyCard["value"], gameType)
     if( gameType == 'GG18' )
-      var schemes = getGG18Schemes( strategyCard, schemeCard1, schemeCard2, schemeCard2, schemeCard2 )
+      var schemes = getGG18Schemes( strategyCard, schemeCard1, schemeCard2, schemeCard3, schemeCard4 )
     else
       var schemes = getSchemes(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"], gameType)
 
