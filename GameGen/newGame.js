@@ -2,7 +2,7 @@ function getURLParameter()
 {
   var URIcomp = decodeURIComponent((new RegExp('[?|&]' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || false;
   if( URIcomp )
-    return URIcomp.match( /GG16=|GG17=|GG18=|B1=|[a-z]|[A-Z]|[-\+]/g )
+    return URIcomp.match( /GG16=|GG17=|GG18=|B1=|[a-z]|[A-Z]|[-!]/g )
   else
     return Array(0)
 }
@@ -172,7 +172,7 @@ function getCharCards()
     charCards['12t'] = "Y"
     charCards['13t'] = "Z"
     charCards['bj'] = "-"
-    charCards['rj'] = "+"
+    charCards['rj'] = "!"
   
     return charCards
 }
@@ -233,7 +233,7 @@ function getCardChars()
     cardChars['Y'] = "12t"
     cardChars['Z'] = "13t"
     cardChars['-'] = "bj"
-    cardChars['+'] = "rj"
+    cardChars['!'] = "rj"
   
     return cardChars
 }
