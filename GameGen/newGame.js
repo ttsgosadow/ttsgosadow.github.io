@@ -7,7 +7,6 @@ function getURLParameter()
     return Array(0)
 }
 
-var cardToChar = function()
 function cardToChar( card )
 {
     var charCard = getCharCards()
@@ -38,7 +37,7 @@ function newGame( gameType )
     if( gameType == 'GG18' )
     {
       var schemeCards = []
-      while ( schemeCards.length < 4)
+      while ( schemeCards.length < 4 )
       {
         var schemeCard = topCard(deck)
         if( schemeCard["card"] != "bj" && schemeCard["card"] != "rj"  )
