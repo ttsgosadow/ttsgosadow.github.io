@@ -31,12 +31,14 @@ function newGame( gameType )
     if( gameType == 'GG18' )
     {
       var schemeCards = []
+      var schemeValues = []
       while ( schemeCards.length < 4 )
       {
         var schemeCard = topCard(deck)
-        if( schemeCard["card"] != "bj" && schemeCard["card"] != "rj"  )
+        if( schemeCard["card"] != "bj" && schemeCard["card"] != "rj" &&  schemeValues.indexOf( schemeCard["value"] ) == -1   )
         {
           schemeCards.push( schemeCard )
+          schemeValues.push( schemeCard[ "value" ] )
         }
       }
 
