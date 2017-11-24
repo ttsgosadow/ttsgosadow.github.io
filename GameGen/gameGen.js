@@ -179,7 +179,8 @@ function getGG18Schemes(s1, v1, v2, v3, v4)
       10: [10, "Take Prisoner", ""],
       11: [11, "Recover Evidence", ""],
       12: [12, "Public Demonstration", ""],
-      13: [13, "Vendetta", ""],
+      13: [13, "Vendetta", ""]
+   }
   
   var pool = [ v1["value"], v2["value"], v3["value"], v4["value"] ]
   pool.sort()
