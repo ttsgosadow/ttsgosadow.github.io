@@ -183,7 +183,9 @@ function getGG18Schemes(s1, v1, v2, v3, v4)
    }
   
   var pool = [ v1["value"], v2["value"], v3["value"], v4["value"] ]
-  pool.sort()
+  pool.sort(function(a, b) {
+          return a - b
+      })
   pool.unshift( s1["suit"] )
      
   return [ schemes[pool[0]], schemes[pool[1]], schemes[pool[2]], schemes[pool[3]], schemes[pool[4]] ]
