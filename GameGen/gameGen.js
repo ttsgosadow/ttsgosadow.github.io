@@ -160,6 +160,53 @@ function getStrategy( suit, value, gameType )
   return strategy[suit]
 }
 
+function getGG18Schemes(s1, v1, v2, v3, v4)
+{
+   var schemes = {
+      c: ["c", "Eliminate the Leadership", ""],
+      m: ["m", "Punish the Weak", ""],
+      r: ["r", "Surround Them", ""],
+      t: ["t", "Guarded Treasure", ""],
+      1: [1, "Covert Breakthrough", ""],
+      2: [2, "Dig Their Graves", ""],
+      3: [3, "Set Up", ""],
+      4: [4, "Hold Up Their Forces", ""],
+      5: [5, "Undercover Entourage", ""],
+      6: [6, "Inescapable Trap", ""],
+      7: [7, "Show Of Force", ""],
+      8: [8, "Search The Ruins", ""],
+      9: [9, "Take One For The Team", ""],
+      10: [10, "Take Prisoner", ""],
+      11: [11, "Recover Evidence", ""],
+      12: [12, "Public Demonstration", ""],
+      13: [13, "Vendetta", ""],
+  
+  var pool = []
+  var p0 = "always"
+  if (s1 == s2) {
+      s2 = "doubles"
+      var vs = [v1, v2].sort(function(a, b) {
+          return a - b
+      })
+      pool = [s2, s1].concat(vs)
+  }
+  if (v1 == v2) {
+      v2 = "doubles"
+      var vs = [s1, s2].sort()
+      pool = vs.concat([v1])
+      pool.unshift(v2)
+  } else {
+      var vs1 = [s1, s2].sort()
+      var vs2 = [v1, v2].sort(function(a, b) {
+          return a - b
+      })
+      pool = vs1.concat(vs2)
+  }
+  pool.unshift(p0)
+  
+  return [schemes[pool[1]], schemes[pool[2]], schemes[pool[3]], schemes[pool[4]], schemes[pool[0]]]
+}
+
 function getSchemes(s1, v1, s2, v2, gameType) 
 {
   if( gameType == 'B1' )
@@ -234,31 +281,6 @@ function getSchemes(s1, v1, s2, v2, gameType)
       11: [11, "Inspection", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br />At the end of every Turn after the first, this Crew scores 1 VP if it has at least one non-Peon model within 4\" of where each end of the Centerline of the board meets the board edge (or corner)."],
       12: [12, "A Quick Murder", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br />When you choose this Scheme, note down the enemy model with the highest Soulstone Cost. If multiple models are tied for the highest Soulstone Cost, then choose one of those models and note it down.<br />This Crew earns 2 VP if the noted enemy model is killed or sacrificed before the end of the game.<br />If the noted enemy model is killed or sacrificed on or before Turn 3, earn 1 additional VP."],
       13: [13, "Last Stand", "This Scheme may not start revealed. Reveal this Scheme at the end of any turn.<br />At the end of every Turn after the Turn this Scheme has been revealed, if this Crew has at least three Enforcer and/or Henchman (any combination of at least three) models in play completely outside their deployment zone and this Crew has fewer models on the table than the enemy Crew, score 1 VP."]
-    }
-  }
-    
-     if( gameType == 'GG18' )
-  {
-    var schemes = {
-      always: ["always", "Inescapable Trap", "This Scheme may not start revealed.<br />At the end of the every Turn after the first, this Crew gains 1 VP if two or more enemy non-Peon model are within 3\" of one or more friendly Scheme Markers. Then, remove one of this Crew’s Scheme Markers that is within 3\" of an enemy model."],
-      doubles: ["doubles", "Eliminate the Leadership", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br/>The first time the enemy Leader is reduced below half of their starting Wounds, score 1 VP.<br />The first time the enemy Leader is reduced to 0 Wounds, Killed, or Sacrificed score 1 VP.<br />If there is no enemy Leader in play at the end of the game, score 1 VP."],
-      c: ["c", "Decay", "This Scheme may not start revealed. You may reveal this Scheme whenever a model is killed or sacrificed.<br /> At the beginning of every Turn, choose a friendly model not in your deployment zone. That model gains the following Condition until the end of the Turn:<br /> Fragile +1: Damage flips against this model gain +Flip.<br /> At the end of the Turn, if the chosen friendly model is still in play and not in your deployment zone, gain 1 VP"],
-      m: ["m", "Hold Up Their Forces", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br />At the end of every Turn after the first, score 1 VP if one of your models is engaged with two or more enemy models with no other friendly models engaging them."],
-      r: ["r", "Collect Evidence", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br />If a friendly model takes a (1) Interact Action and removes 1 or more enemy Scheme Markers, score 1 VP.<br />At the end of the Turn, if this Scheme is revealed and the opponent does not have any Scheme Markers at least 6\" outside of their deployment zone, score 1 VP.<br />At the end of any Turn after the first, if the opponent has no Scheme Markers in play at least 6\" outside of their deployment zone, reveal this Scheme (it cannot score this Turn)."],
-      t: ["t", "Buried Treasure", "This Scheme may not start revealed.<br />At the end of the game, this Crew scores 1 VP for each of its Scheme Markers more than 6\" from your deployment zone and not within 6\" of any enemy non-Leader models. "],
-      1: [1, "Covert Breakthrough", "This Scheme may not start revealed.<br />At the end of the game, this Crew earns 1 VP for each of its Scheme Markers within 6\" of the enemy Deployment Zone."],
-      2: [2, "Undercover Entourage", "This Scheme may not start revealed.<br />When you choose this Scheme, note down one of this Crew's Master or Henchman models. At the end of the game, if the chosen model is in the opponent's half of the table, this Crew earns 1 VP.<br />If the chosen model is in the enemy Deployment Zone at the end of the game, this Crew earns 1 additional VP.<br />If the chosen model is in the opponent's half of the table at the end of the game and has half or more of its Wounds remaining, this Crew earns 1 additional VP."],
-      3: [3, "Show of Force", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br />At the end of every Turn after the first, count the number of face-up Upgrades with a printed cost greater than 0 attached to each non-Master model within 6\" of the center of the board for each Crew. Upgrades which began the game attached to a Master do not count toward this total.<br />If this Crew has at least one qualifying Upgrade and has a number of qualifying Upgrades equal to or exceeding the opposing Crew’s number of qualifying Upgrades, this crew scores 1VP."],
-      4: [4, "Make Them Suffer", "At the end of every Turn after the first in which at least one enemy Minion or Peon model was killed by one of this Crew's Henchman or Master models, score 1 VP. At the end of every Turn after the first, if the opposing Crew has no Minion or Peon models, score 1 VP. No more than 1 VP per Turn may be scored from this Scheme.<br />This Scheme must be revealed as soon as any VP are scored from it."],
-      5: [5, "Strand of Fate", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br />At the end of every Turn after the first, if this Crew has at least two Scheme Markers within 2\" of the Centerline of the board, with a friendly model within 2\" of each Scheme Marker, and not within 4\" of another friendly Scheme Marker, this Crew scores 1 VP and removes all friendly Scheme Markers within 2\" of the Centerline."],
-      6: [6, "Smuggled Across", "This Scheme may not start revealed.<br />Once per game, at the start of any Turn, this Crew may choose to reveal this Scheme if it has three or more Minion models on the enemy half of the board, not within 6\" of the Center.<br />At the end of the Turn on which this Scheme was revealed, score a number of VP equal to the number of this Crew’s Minion models on the enemy half of the board which are not within 6\" of the Center."],
-      7: [7, "Set Up", "This Scheme may not start revealed.<br />When you choose this Scheme, note down an enemy Master, Henchman, or Enforcer model.<br />Once per game, at the end of any Turn, this Crew may reveal this Scheme to score a number of VP equal to the number of this Crew's Scheme Markers within 4\" of the noted model.<br />Then remove all of this Crew's Scheme Markers within 4\" of the noted model."],
-      8: [8, "Search the Ruins", "This Scheme may not start revealed.<br />At the end of the game, this Crew earns 2 VP if it has 3 or more Scheme Markers within 6\" of the Center of the board.<br />If at least two of those Scheme Markers are on the opponent's half of the table, earn 1 additional VP.<br />Scheme Markers which are within 2\" of one or more other friendly Scheme Markers do not count towards this Scheme."],
-      9: [9, "Vigilante", "This Scheme may not start revealed. When you choose this Scheme, note a friendly non-Leader model.<br />Reveal this Scheme when a friendly model is killed by an enemy model, and note the enemy model.<br />Whenever a friendly model is killed by an enemy model, note the enemy model.<br />If the noted friendly model kills a noted enemy model, gain 1 VP.<br />If the noted friendly model is in play at the end of the game, gain 1 VP."],
-      10: [10, "Take One For the Team", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br />When you choose this Scheme, note one of this Crew’s non-Peon models as the \"sucker.\" If the chosen \"sucker\" model is killed or sacrificed by an enemy model, score 1 VP.<br />If the enemy model has a higher Soulstone cost than the sucker or was a Master, score 1 additional VP. Models without a Soulstone cost of 0 count as having a cost of 10.<br />If this Scheme was accomplished on or before Turn 3, score 1 additional VP."],
-      11: [11, "Inspection", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br />At the end of every Turn after the first, this Crew scores 1 VP if it has at least one non-Peon model within 4\" of where each end of the Centerline of the board meets the board edge (or corner)."],
-      12: [12, "Leave Your Mark", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br />At the end of every Turn after the first, this Crew may remove one of its Scheme Markers which is on the opponent's half of the board, not within 6\" of the of the Centerline, and not within 4\" of a non-Peon enemy model to score 1 VP."],
-      13: [13, "Dig Their Graves", "This Scheme may not start revealed. Reveal this Scheme once this Crew has scored any VP from it.<br />Once per turn, after this Crew kills or sacrifices an enemy non-Peon model that is within 4\" of one or more Scheme Markers friendly to this Crew, score 1 VP, then your opponent may remove one Scheme Marker friendly to your Crew within 4\" of the killed (or sacrificed) model.<br />If this Scheme and another of your Schemes would score any VP off the same model being killed or sacrificed, you must choose only one of your Schemes to score from."]
     }
   }
   
