@@ -181,30 +181,11 @@ function getGG18Schemes(s1, v1, v2, v3, v4)
       12: [12, "Public Demonstration", ""],
       13: [13, "Vendetta", ""],
   
-  var pool = []
-  var p0 = "always"
-  if (s1 == s2) {
-      s2 = "doubles"
-      var vs = [v1, v2].sort(function(a, b) {
-          return a - b
-      })
-      pool = [s2, s1].concat(vs)
-  }
-  if (v1 == v2) {
-      v2 = "doubles"
-      var vs = [s1, s2].sort()
-      pool = vs.concat([v1])
-      pool.unshift(v2)
-  } else {
-      var vs1 = [s1, s2].sort()
-      var vs2 = [v1, v2].sort(function(a, b) {
-          return a - b
-      })
-      pool = vs1.concat(vs2)
-  }
-  pool.unshift(p0)
-  
-  return [schemes[pool[1]], schemes[pool[2]], schemes[pool[3]], schemes[pool[4]], schemes[pool[0]]]
+  var pool = [ v1["value"], v2["value"], v3["value"], v4["value"] ]
+  pool.sort()
+  poolunshift( s1["value"] )
+     
+  return [ schemes[pool[0]], schemes[pool[1]], schemes[pool[2]], schemes[pool[3]], schemes[pool[4]] ]
 }
 
 function getSchemes(s1, v1, s2, v2, gameType) 
