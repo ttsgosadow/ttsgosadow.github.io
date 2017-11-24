@@ -25,12 +25,17 @@ function generateGame( targetField )
   {
     var deployment = getDeployment(deploymentCard["value"], gameType)
     var strategy = getStrategy(strategyCard["suit"], strategyCard["value"], gameType)
-    var schemes = getSchemes(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"], gameType)
+    if( gameType == 'GG18' )
+      var schemes = getGG18Schemes( strategyCard, schemeCard1, schemeCard2, schemeCard2, schemeCard2 )
+    else
+      var schemes = getSchemes(schemeCard1["suit"], schemeCard1["value"], schemeCard2["suit"], schemeCard2["value"], gameType)
 
     if( gameType == 'B1' )
       var gameType = 'Book 1'
-      
+    
     var gameLink = "?" + URIparam[0] + URIparam[1] + URIparam[2] + URIparam[3] + URIparam[4]
+    if( URIparam.length == 7 )
+      gameLink += URIparam[5] + URIparam[6]
     document.getElementById( 'visible-input' ).innerHTML = 'https://ttsgosadow.github.io/GameGen/' + gameLink
 
     //hier ui maken 
@@ -94,8 +99,8 @@ function getStrategy( suit, value, gameType )
 {
     if( gameType == 'GG18' )
     {
-       if( suit == 'bj' || ( isEven( value ) && suit != 'rj' ) )
-        gameType = 'B1'
+       if( suit == 'bj' || suit == 'rj' || isEven( value ) )
+        gameType = 'GG17'
     }
     
     if( gameType == 'GG17' )
@@ -143,12 +148,12 @@ function getStrategy( suit, value, gameType )
     if( gameType == 'GG18' )
   {
     var strategy = {
-      bj: ["Supply Wagons", "<em>Set Up</em><br />While deploying models, each player places one 50mm, Ht 3, blocking, impassable friendly Supply Wagon Marker on their side of the table, anywhere in their deployment zone.<br /><br /><em>Special</em><br />Any non-Peon model in base contact with a Supply Wagon Marker may take a (1) Interact action targeting the Marker to push it in any direction, ignoring intervening models. The distance of the push depends on the size of the model:<br />• 30mm: Up to 2\"<br />• 40mm: Up to 3\"<br />• 50mm: Up to 4\"<br />On every Turn after the first, a Crew gains 1 VP if they have a friendly Supply Wagon on their opponent's side of the boat."],
-      rj: ["Supply Wagons", "<em>Set Up</em><br />While deploying models, each player places one 50mm, Ht 3, blocking, impassable friendly Supply Wagon Marker on their side of the table, anywhere in their deployment zone.<br /><br /><em>Special</em><br />Any non-Peon model in base contact with a Supply Wagon Marker may take a (1) Interact action targeting the Marker to push it in any direction, ignoring intervening models. The distance of the push depends on the size of the model:<br />• 30mm: Up to 2\"<br />• 40mm: Up to 3\"<br />• 50mm: Up to 4\"<br />On every Turn after the first, a Crew gains 1 VP if they have a friendly Supply Wagon on their opponent's side of the boat."],
-      c: ["Public Executions", "<em>Special Rules</em><br />Whenever a friendly model kills or sacrifices a non-Peon model which it considers an enemy, place a friendly 30mm Strategy Marker in base contact with the enemy model before it is removed from play (after all other effects are completed).<br /> Any model within 1\" of a Strategy Marker (friendly or enemy) may take a (1) Interact Action targeting the Marker to remove it from play.<br /><br /><em>Victory Points</em><br />At the end of every Turn after the first, a Crew gains 1 VP if it has more friendly Strategy Markers in play than the enemy Crew. Then, remove all Strategy Markers in play."],
-      m: ["Ours", "<em>Set Up</em><br />Divide the table into four 18\" by 18\" table Quarters.<br /><br /><em>Victory Points</em><br />During the Upkeep Step of each Turn after the first, add up the Soulstone cost of all friendly non-Peon models in each table quarter,  not counting any models that were summoned this game. The Crew with the highest Soulstone cost within the table quarter controls it (models without a Soulstone cost count as 10). These models cannot be within 6\" of the Center of the table or partially within another table quarter."],
-      r: ["Symbols of Authority", "<em>Set up</em><br />While deploying models, each player places three 50mm, Ht 5, blocking impassable Strategy Markers on their side of the table not in their deployment zone at least 10\" from another Marker.<br /><br /><em>Special Rules</em><br />On every Turn after the first, non-Peon models gain the following (1) Interact Action:<br />(1) Interact: Target a Strategy Marker within 1\" on the opponent's side of the board. Remove the targeted Strategy Marker from play and gain 1 VP. No more than 1 VP may be scored from this Action per Turn.<br /><br /><em>Victory Points</em><br />At the end of the game, a Crew gains 1 VP if they have any Strategy Markers on their side of the table."],
-      t: ["Ply for Information", "<em>Special Rules</em><br />All non-Peon models engaged with an enemy model may take a (1) Interact Action to gain the following Condition until the end of the Turn:<br />Gathered Intel: This Condition is removed if this model suffers Severe damage.<br /><br /><em>Victory Points</em><br />At the end of the Turn, a Crew gains 1 VP if they have more friendly models in play with the Gathered Intel Condition than enemy models with the Gathered Intel Condition."]
+      bj: ["None", ""],
+      rj: ["None", ""],
+      c: ["Ours", "Divide the table into four 18\" by 18\" table Quarters.<br /><em>Victory Points<\em>At the end of every Turn after the first, add up the Soulstone cost of all friendly non-Peon models in each table quarter, not counting any models that were summoned this game or that are within any other table quarters or 6\" of the Center of the table. (Leaders count as having a cost of 10). The Crew with the highestSoulstone cost within each table quarter controls it.<br />If a Crew controls at least two table quarters, that Crew earns 1 VP."],
+      m: ["Symbols of Authority", "Before either player deploys models, starting with thesecond player, each player places three 50mm, Ht 5, blocking impassable Strategy Markers fully on their side of the table, not in their deployment zone, and at least 10\" from another Strategy Marker on their side of the table. These markers cannot be placed in base contact with impassable terrain.<br /><em>Special<\em><br />On every Turn after the first, non-Peon models may take a (1) Interact action targeting a Strategy Marker within 1\" on their opponent's side of the board to remove it from play.<br /><em>Victory Points<\em><br />At the end of every Turn after the first, a Crew earns 1 VP if it removed a Strategy Marker from the board this Turn.<br />At the end of the game, a Crew earns 1 VP if they have any Strategy Markers on their side of the table."],
+      r: ["Ply for Information", "On any Turn after the first, Non-Peon models may take a (1) Interact Action targeting an enemy model they are engaged with that does not have the Gathered Intel Condition to gain the following Condition until the end of the game:<br /> Gathered Intel: This Condition is removed if this model suffers Severe damage.<br /><em>Victory Points<\em>At the end of every Turn after the first, the Crew with the most friendly models in play with the Gathered Intel Condition earns 1 VP. Then remove the Gathered Intel Condition from every model in play."],
+      t: ["Public Executions", "On any Turn after the first, whenever a friendly non-Peon model kills or sacrifices a non-Peon model it considers an enemy, it gains the following Condition until the end of the game:<br />Shed Blood: At the end of this model's Activation, remove this condition if no enemy models have line of sight to this model.<br /><em>Victory Points<\em><br />At the end of every Turn after the first, the Crew with the most friendly models in play with the Shed Blood Condition earns 1 VP. Then remove the Shed Blood Condition from every model in play."]
     }
   }
 
