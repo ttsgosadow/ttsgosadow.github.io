@@ -2,7 +2,7 @@ function getURLParameter()
 {
   var URIcomp = decodeURIComponent((new RegExp('[?|&]' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || false;
   if( URIcomp )
-    return URIcomp.match( /(\d+[cmrt]|bj|rj|GG16|GG17|GG18|B1)/g )
+    return URIcomp.match( /(\[a-Z]|GG16=|GG17=|GG18=|B1=)/g )
   else
     return Array(0)
 }
@@ -24,7 +24,8 @@ function newGame( gameType )
     var schemeCard2 = topCard(deck)
     while (schemeCard2["card"] == "bj" || schemeCard2["card"] == "rj")
         schemeCard2 = topCard(deck)
-    var goToURL = "?" + gameType + deploymentCard["card"] + strategyCard["card"] + schemeCard1["card"] + schemeCard2["card"]
+    
+    var goToURL = "?" + gameType + "=" + getCardChar( deploymentCard ) + getCardChar( strategyCard ) + getCardChar( schemeCard1 ) + getCardChar( schemeCard2 )
   }
   else
   { 
