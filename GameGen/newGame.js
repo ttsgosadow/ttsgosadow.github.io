@@ -7,6 +7,12 @@ function getURLParameter()
     return Array(0)
 }
 
+function cardToChar( card )
+{
+    var charCard = getCharCards()
+    return charCard[ card["value"] ]
+}
+
 function newGame( gameType ) 
 {
   var deck = newDeck()
@@ -35,8 +41,6 @@ function newGame( gameType )
       if( schemeCard["card"] != "bj" && schemeCard["card"] != "rj"  )
         schemeCards.push( schemeCard )
     }
-    
-    alert( deploymentCard["card"] )
     
     var deploymentChar = cardToChar( deploymentCard )
     var strategyChar = cardtoChar( strategyCard )
@@ -96,12 +100,6 @@ function shuffle(array)
       array[randomIndex] = temporaryValue;
   }
   return array;
-}
-
-function cardToChar( card )
-{
-    var charCard = getCharCards()
-    return charCard[ card["value"] ]
 }
 
 function getCharCards()
