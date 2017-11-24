@@ -2,7 +2,7 @@ function getURLParameter()
 {
   var URIcomp = decodeURIComponent((new RegExp('[?|&]' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || false;
   if( URIcomp )
-    return URIcomp.match( /(\[a-Z]|GG16=|GG17=|GG18=|B1=)/g )
+    return URIcomp.match( /([a-Z]|GG16=|GG17=|GG18=|B1=)/g )
   else
     return Array(0)
 }
