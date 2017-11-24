@@ -32,26 +32,31 @@ function newGame( gameType )
         schemeCard2 = topCard(deck)
     var goToURL = "?" + gameType + deploymentCard["card"] + strategyCard["card"] + schemeCard1["card"] + schemeCard2["card"]
   }
-  else{ if( gameType == 'GG18' )
-  {
-    var schemeCards = []
-    while ( schemeCards.length < 4)
+  else
+  { 
+    if( gameType == 'GG18' )
     {
-      var schemeCard = topCard(deck)
-      if( schemeCard["card"] != "bj" && schemeCard["card"] != "rj"  )
-        schemeCards.push( schemeCard )
+      var schemeCards = []
+      while ( schemeCards.length < 4)
+      {
+        var schemeCard = topCard(deck)
+        if( schemeCard["card"] != "bj" && schemeCard["card"] != "rj"  )
+        {
+          schemeCards.push( schemeCard )
+        }
+      }
+
+      var deploymentChar = cardToChar( deploymentCard )
+      var strategyChar = cardtoChar( strategyCard )
+
+      var schemeChar1 = cardtoChar( schemeCards.shift() )
+      var schemeChar2 = cardtoChar( schemeCards.shift() )
+      var schemeChar3 = cardtoChar( schemeCards.shift() )
+      var schemeChar4 = cardtoChar( schemeCards.shift() )
+
+      goToURL = "?" + gameType + "=" + deploymentChar + strategyChar + schemeChar1 + schemeChar2 + schemeChar3 + schemeChar4
+      }
     }
-    
-    var deploymentChar = cardToChar( deploymentCard )
-    var strategyChar = cardtoChar( strategyCard )
-    
-    var schemeChar1 = cardtoChar( schemeCards.shift() )
-    var schemeChar2 = cardtoChar( schemeCards.shift() )
-    var schemeChar3 = cardtoChar( schemeCards.shift() )
-    var schemeChar4 = cardtoChar( schemeCards.shift() )
-      
-    goToURL = "?" + gameType + "=" + deploymentChar + strategyChar + schemeChar1 + schemeChar2 + schemeChar3 + schemeChar4
-    }}
     window.location.href = goToURL
 }
 
