@@ -50,5 +50,5 @@ function buttonGO( numSchemes)
 
 function startSpecGame()
 {
-  
+  specGame( 'GG18' )
 }
