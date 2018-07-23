@@ -11,7 +11,7 @@ function specGame( gameType )
     specifyGame += "<br />"
     specifyGame += ddlbSchemes( gameType )
     specifyGame += "<br />"
-    specifyGame =+ buttonGO( 4 )
+    specifyGame += buttonGO( 4 )
   }
   
   document.getElementById( 'generated-game' ).innerHTML = specifyGame
@@ -25,7 +25,7 @@ function ddlbDeployment( gameType )
   var n = 0
   while( n < deck.length )
   {
-    var depl += '<option value="'+charCards[deck[n]]+'">deck[n]</option>'
+    depl += '<option value="'+charCards[deck[n]]+'">deck[n]</option>'
     n++
   }
   
@@ -50,5 +50,4 @@ function buttonGO( numSchemes)
 
 function startSpecGame()
 {
-  specGame( 'GG18' )
 }
