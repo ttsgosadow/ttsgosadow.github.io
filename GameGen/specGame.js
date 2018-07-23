@@ -25,7 +25,7 @@ function ddlbDeployment( gameType )
   var n = 0
   while( n < deck.length )
   {
-    depl += '<option value="'+charCards[deck[n]]+'">deck[n]</option>'
+    depl += '<option value="'+charCards[deck[n]]+'">'+deck[n]+'</option>'
     n++
   }
   
