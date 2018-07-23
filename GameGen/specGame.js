@@ -22,10 +22,12 @@ function ddlbDeployment( gameType )
   var depl ='<select id="specDeployment" name="specDeployment">'
   var deck = newDeck()
   var charCards = getCharCards()
+  var curDepl = []
   var n = 0
   while( n < deck.length )
   {
-    depl += '<option value="'+charCards[deck[n]]+'">'+getDeployment( deck[n], gameType )[0]+'</option>'
+    curDepl = getDeployment( deck[n], gameType )
+    depl += '<option value="'+charCards[deck[n]]+'">'+curDepl[0]+'</option>'
     n++
   }
   
