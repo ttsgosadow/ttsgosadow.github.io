@@ -14,7 +14,7 @@ function specGame( gameType )
     specifyGame =+ buttonGO( 4 )
   }
   
-  document.getElementById( targetField ).innerHTML = specifyGame
+  document.getElementById( 'generated-game' ).innerHTML = specifyGame
 }
 
 function ddlbDeployment( gameType )
