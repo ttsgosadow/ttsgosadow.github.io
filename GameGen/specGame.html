@@ -91,100 +91,120 @@
       </p>
       
       <p>
-        <em>Deployment:</em> 
-        <select id="specDeployment" name="specDeployment">
-          <option value="standard">Standard (1-7)</option>
-          <option value="corner">Corner (8-10)</option>
-          <option value="flank">Flank (11-13)</option>
-          <option value="close">Close (joker)</option>
-        </select><br />
-        
-        <em>Strategy:</em>
-        <select id="specStrategy" name="specStrategy">
-          <option value="c18">Ours! (crow)</option>
-          <option value="m18">Symbols of Authority (mask)</option>
-          <option value="r18">Ply for Information (ram)</option>
-          <option value="t18">Public Executions (tome)</option>
-          <option value="j18">Supply Wagons (joker)</option>
-          <option value="c17">Guard the Stash (crow, GG17)</option>
-          <option value="m17">Interference (mask, GG17)</option>
-          <option value="r17">Extraction (ram, GG17)</option>
-          <option value="t17">Headhunter (tome, GG17)</option>
-          <option value="j17">Collect the Bounty (joker, GG17)</option>
-        </select><br />
-        
-        <em>Scheme 1:</em>
-        <select id="specScheme1" name="specScheme1">
-          <option value="1">Covert Breakthrough (1)</option>
-          <option value="2">Dig Their Graves (2)</option>
-          <option value="3">Set Up (3)</option>
-          <option value="4">Hold Up Their Forces (4)</option>
-          <option value="5">Undercover Entourage (5)</option>
-          <option value="6">Inescapable Trap (6)</option>
-          <option value="7">Show of Force (7)</option>
-          <option value="8">Search The Ruins (8)</option>
-          <option value="9">Take Prisoner (9)</option>
-          <option value="10">Take One For The Team (10)</option>
-          <option value="11">Recover Evidence (11)</option>
-          <option value="12">Vendetta (12)</option>
-          <option value="13">Public Demonstration (13)</option>
-        </select><br />
-        
-        <em>Scheme 2:</em>
-        <select id="specScheme1" name="specScheme2">
-          <option value="1">Covert Breakthrough (1)</option>
-          <option value="2">Dig Their Graves (2)</option>
-          <option value="3">Set Up (3)</option>
-          <option value="4">Hold Up Their Forces (4)</option>
-          <option value="5">Undercover Entourage (5)</option>
-          <option value="6">Inescapable Trap (6)</option>
-          <option value="7">Show of Force (7)</option>
-          <option value="8">Search The Ruins (8)</option>
-          <option value="9">Take Prisoner (9)</option>
-          <option value="10">Take One For The Team (10)</option>
-          <option value="11">Recover Evidence (11)</option>
-          <option value="12">Vendetta (12)</option>
-          <option value="13">Public Demonstration (13)</option>
-        </select><br />
-        
-        <em>Scheme 3:</em>
-        <select id="specScheme3" name="specScheme3">
-          <option value="1">Covert Breakthrough (1)</option>
-          <option value="2">Dig Their Graves (2)</option>
-          <option value="3">Set Up (3)</option>
-          <option value="4">Hold Up Their Forces (4)</option>
-          <option value="5">Undercover Entourage (5)</option>
-          <option value="6">Inescapable Trap (6)</option>
-          <option value="7">Show of Force (7)</option>
-          <option value="8">Search The Ruins (8)</option>
-          <option value="9">Take Prisoner (9)</option>
-          <option value="10">Take One For The Team (10)</option>
-          <option value="11">Recover Evidence (11)</option>
-          <option value="12">Vendetta (12)</option>
-          <option value="13">Public Demonstration (13)</option>
-        </select><br />
-        
-        <em>Scheme 4:</em>
-        <select id="specScheme4" name="specScheme4">
-          <option value="1">Covert Breakthrough (1)</option>
-          <option value="2">Dig Their Graves (2)</option>
-          <option value="3">Set Up (3)</option>
-          <option value="4">Hold Up Their Forces (4)</option>
-          <option value="5">Undercover Entourage (5)</option>
-          <option value="6">Inescapable Trap (6)</option>
-          <option value="7">Show of Force (7)</option>
-          <option value="8">Search The Ruins (8)</option>
-          <option value="9">Take Prisoner (9)</option>
-          <option value="10">Take One For The Team (10)</option>
-          <option value="11">Recover Evidence (11)</option>
-          <option value="12">Vendetta (12)</option>
-          <option value="13">Public Demonstration (13)</option>
-        </select><br />
-      </p>
-
-      <p>
-        <button type="button" class="btn btn-outline-primary btn-lg" onclick="specGame()">Create a link for this game</button>
-      </p>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Pick deployment, strategy and schemes below</h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              <strong>Deployment:</strong> 
+              <select id="specDeployment" name="specDeployment">
+                <option value="standard">Standard (1-7)</option>
+                <option value="corner">Corner (8-10)</option>
+                <option value="flank">Flank (11-13)</option>
+                <option value="close">Close (joker)</option>
+              </select>
+            </p>
+            
+            <p>
+              <strong>Strategy:</strong>
+              <select id="specStrategy" name="specStrategy">
+                <option value="c18">Ours! (crow)</option>
+                <option value="m18">Symbols of Authority (mask)</option>
+                <option value="r18">Ply for Information (ram)</option>
+                <option value="t18">Public Executions (tome)</option>
+                <option value="j18">Supply Wagons (joker)</option>
+                <option value="c17">Guard the Stash (crow, GG17)</option>
+                <option value="m17">Interference (mask, GG17)</option>
+                <option value="r17">Extraction (ram, GG17)</option>
+                <option value="t17">Headhunter (tome, GG17)</option>
+                <option value="j17">Collect the Bounty (joker, GG17)</option>
+              </select>
+            </p>
+            
+            <p>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <strong>Scheme 1:</strong>
+                  <select id="specScheme1" name="specScheme1">
+                    <option value="1">Covert Breakthrough (1)</option>
+                    <option value="2">Dig Their Graves (2)</option>
+                    <option value="3">Set Up (3)</option>
+                    <option value="4">Hold Up Their Forces (4)</option>
+                    <option value="5">Undercover Entourage (5)</option>
+                    <option value="6">Inescapable Trap (6)</option>
+                    <option value="7">Show of Force (7)</option>
+                    <option value="8">Search The Ruins (8)</option>
+                    <option value="9">Take Prisoner (9)</option>
+                    <option value="10">Take One For The Team (10)</option>
+                    <option value="11">Recover Evidence (11)</option>
+                    <option value="12">Vendetta (12)</option>
+                    <option value="13">Public Demonstration (13)</option>
+                  </select>
+                </li>
+                <li class="list-group-item">
+                  <strong>Scheme 2:</strong>
+                  <select id="specScheme1" name="specScheme2">
+                    <option value="1">Covert Breakthrough (1)</option>
+                    <option value="2">Dig Their Graves (2)</option>
+                    <option value="3">Set Up (3)</option>
+                    <option value="4">Hold Up Their Forces (4)</option>
+                    <option value="5">Undercover Entourage (5)</option>
+                    <option value="6">Inescapable Trap (6)</option>
+                    <option value="7">Show of Force (7)</option>
+                    <option value="8">Search The Ruins (8)</option>
+                    <option value="9">Take Prisoner (9)</option>
+                    <option value="10">Take One For The Team (10)</option>
+                    <option value="11">Recover Evidence (11)</option>
+                    <option value="12">Vendetta (12)</option>
+                    <option value="13">Public Demonstration (13)</option>
+                  </select>
+                </li>
+                <li class="list-group-item">
+                  <strong>Scheme 3:</strong>
+                  <select id="specScheme3" name="specScheme3">
+                    <option value="1">Covert Breakthrough (1)</option>
+                    <option value="2">Dig Their Graves (2)</option>
+                    <option value="3">Set Up (3)</option>
+                    <option value="4">Hold Up Their Forces (4)</option>
+                    <option value="5">Undercover Entourage (5)</option>
+                    <option value="6">Inescapable Trap (6)</option>
+                    <option value="7">Show of Force (7)</option>
+                    <option value="8">Search The Ruins (8)</option>
+                    <option value="9">Take Prisoner (9)</option>
+                    <option value="10">Take One For The Team (10)</option>
+                    <option value="11">Recover Evidence (11)</option>
+                    <option value="12">Vendetta (12)</option>
+                    <option value="13">Public Demonstration (13)</option>
+                  </select>
+                </li>
+                <li class="list-group-item">
+                  <strong>Scheme 4:</strong>
+                  <select id="specScheme4" name="specScheme4">
+                    <option value="1">Covert Breakthrough (1)</option>
+                    <option value="2">Dig Their Graves (2)</option>
+                    <option value="3">Set Up (3)</option>
+                    <option value="4">Hold Up Their Forces (4)</option>
+                    <option value="5">Undercover Entourage (5)</option>
+                    <option value="6">Inescapable Trap (6)</option>
+                    <option value="7">Show of Force (7)</option>
+                    <option value="8">Search The Ruins (8)</option>
+                    <option value="9">Take Prisoner (9)</option>
+                    <option value="10">Take One For The Team (10)</option>
+                    <option value="11">Recover Evidence (11)</option>
+                    <option value="12">Vendetta (12)</option>
+                    <option value="13">Public Demonstration (13)</option>
+                  </select>
+                </li>
+              </ul>
+            </p>
+            
+            <p>
+             <button type="button" class="btn btn-outline-primary btn-lg" onclick="specGame()">Create a link for this game</button>
+            </p>
+            
+          </div>
+        </div>
       
       <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
