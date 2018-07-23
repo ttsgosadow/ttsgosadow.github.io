@@ -29,7 +29,7 @@ function ddlbDeployment( gameType )
     n++
   }
   
-  var depl += '</select>'
+  depl += '</select>'
   return depl
 }
 
