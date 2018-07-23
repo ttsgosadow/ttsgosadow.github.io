@@ -7,7 +7,7 @@ function specGame( gameType )
     
     specifyGame += ddlbDeployment( gameType )
     specifyGame += "<br />"
-    specifyGame += ddlbstrategy( gameType )
+    specifyGame += ddlbStrategy( gameType )
     specifyGame += "<br />"
     specifyGame += ddlbSchemes( gameType )
     specifyGame += "<br />"
